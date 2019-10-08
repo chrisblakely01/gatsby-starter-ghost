@@ -1,7 +1,8 @@
 import React from 'react'
 import PropTypes from 'prop-types'
+import { graphql } from 'gatsby'
 
-import { Layout, Pagination } from '../components/common'
+import { Layout, PostCard, Pagination } from '../components/common'
 import { MetaData } from '../components/common/meta'
 
 /**
@@ -12,14 +13,19 @@ import { MetaData } from '../components/common/meta'
 * in /utils/siteConfig.js under `postsPerPage`.
 *
 */
-const Index = ({ location, pageContext }) => {
+const Blog = ({ data, location, pageContext }) => {
+    const posts = data.allGhostPost.edges
+
     return (
         <>
             <MetaData location={location} />
-            <Layout isHome={true}>
+            <Layout isHome={false}>
                 <div className="container">
                     <section className="post-feed">
-						this is home page
+                        {posts.map(({ node }) => (
+                            // The tag below includes the markup for each post - components/common/PostCard.js
+                            <PostCard key={node.id} post={node} />
+                        ))}
                     </section>
                     <Pagination pageContext={pageContext} />
                 </div>
@@ -28,7 +34,7 @@ const Index = ({ location, pageContext }) => {
     )
 }
 
-Index.propTypes = {
+Blog.propTypes = {
     data: PropTypes.shape({
         allGhostPost: PropTypes.object.isRequired,
     }).isRequired,
@@ -38,22 +44,22 @@ Index.propTypes = {
     pageContext: PropTypes.object,
 }
 
-export default Index
+export default Blog
 
 // This page query loads all posts sorted descending by published date
 // The `limit` and `skip` values are used for pagination
-// export const pageQuery = graphql`
-//   query GhostPostQuery($limit: Int!, $skip: Int!) {
-//     allGhostPost(
-//         sort: { order: DESC, fields: [published_at] },
-//         limit: $limit,
-//         skip: $skip
-//     ) {
-//       edges {
-//         node {
-//           ...GhostPostFields
-//         }
-//       }
-//     }
-//   }
-// `
+export const pageQuery = graphql`
+  query GhostPostQuery($limit: Int!, $skip: Int!) {
+    allGhostPost(
+        sort: { order: DESC, fields: [published_at] },
+        limit: $limit,
+        skip: $skip
+    ) {
+      edges {
+        node {
+          ...GhostPostFields
+        }
+      }
+    }
+  }
+`

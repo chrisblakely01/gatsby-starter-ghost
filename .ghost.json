@@ -1,10 +1,10 @@
 {
   "development": {
-    "apiUrl": "https://chrisblakely.ghost.io",
-    "contentApiKey": "2eb42e5b5fe66da65d3b802bc9"
+    "apiUrl": "https://chrisblakely.dev",
+    "contentApiKey": "f49d4250ff6cc87c2e40cb7cb9"
   },
   "production": {
-    "apiUrl": "https://chrisblakely.ghost.io",
-    "contentApiKey": "2eb42e5b5fe66da65d3b802bc9"
+    "apiUrl": "https://chrisblakely.dev",
+    "contentApiKey": "f49d4250ff6cc87c2e40cb7cb9"
   }
 }
