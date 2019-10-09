@@ -545,6 +545,7 @@ img.svg{
 	letter-spacing: -.5px;
 	padding-left: 25px;
 	line-height: 1;
+	margin: 0;
 /*	font-style: italic;*/
 }
 .arlo_tm_title_holder span{
@@ -969,6 +970,7 @@ img.svg{
 .arlo_tm_mini_title_holder h4{
 	line-height: 1;
 	margin-bottom: 18px;
+	margin: 0;
 }
 .arlo_tm_mini_title_holder.contact h4{margin-bottom:30px;}
 
