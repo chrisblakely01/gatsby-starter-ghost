@@ -18,7 +18,6 @@ const Home = () => (
 		<>
 			<MetaData location={location} />
 			<Layout isHome={true}>
-
 			            <div className="arlo_tm_section" id="home">
 			                <div className="arlo_tm_hero_header_wrap">
 			                    <div className="arlo_tm_universal_box_wrap">
@@ -438,10 +437,10 @@ const Home = () => (
 			            {/* <!-- /COUNTERBOX --> */}
 
 			            {/* <!-- NEWS --> */}
-			            <div className="arlo_tm_section" id="news">
-			                <div className="arlo_tm_news_wrap">
+			            <div className="arlo_tm_section" >
+			                <div className="arlo_tm_news_wrap" >
 			                    <div className="container">
-			                        <div className="arlo_tm_title_holder news">
+			                        <div className="arlo_tm_title_holder news" id="news">
 			                            <h3>Latest News</h3>
 			                            <span>Check out our latest News</span>
 			                        </div>

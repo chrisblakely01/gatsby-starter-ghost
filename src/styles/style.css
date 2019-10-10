@@ -319,6 +319,18 @@ img.svg{
 	height: auto;
 	clear: both;
 	float: left;
+	/* background-color: rgb(241, 241, 241); */
+	
+	-webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
+	   -moz-box-sizing: border-box; /* Firefox, other Gecko */
+			box-sizing: border-box; /* Opera/IE 8+ */
+}
+.blog-container{
+	width: 100%;
+	height: auto;
+	clear: both;
+	float: left;
+	background-color: rgb(241, 241, 241);
 	
 	-webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
 	   -moz-box-sizing: border-box; /* Firefox, other Gecko */
@@ -512,6 +524,27 @@ img.svg{
 	font-size: 30px;
 }
 
+.arlo_blog {
+    width: 100%;
+    height: auto;
+    clear: both;
+    float: left;
+    text-align: left;
+    padding-bottom: 100px;
+    position: relative;
+    margin-top: 15px;
+    box-sizing: border-box;
+}
+
+.arlo_tm_title_holder:before {
+    position: absolute;
+    content: "";
+    width: 6px;
+    height: 72px;
+    background-color: #E3872D;
+    top: 2px;
+}
+
 /*---------------------------------------------------*/
 /*	03) ARLO ABOUT
 /*---------------------------------------------------*/
@@ -524,6 +557,7 @@ img.svg{
 	text-align: left;
 	padding-bottom: 100px;
 	position: relative;
+	margin-top: 15px;
 	
 	-webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
 	   -moz-box-sizing: border-box; /* Firefox, other Gecko */
@@ -1542,6 +1576,7 @@ img.svg{
     position: relative;
     overflow: hidden;
 }
+
 .arlo_tm_news_wrap .read_more a:before{
 	position: absolute;
     content: "";

@@ -14,33 +14,40 @@ import { MetaData } from '../components/common/meta'
 *
 */
 const Blog = ({ data, location, pageContext }) => {
-    const posts = data.allGhostPost.edges
-    return (
-        <>
-            <MetaData location={location} />
-            <Layout isHome={false}>
-                <div className="container">
-                    <section className="post-feed">
-                        {posts.map(({ node }) => (
-                            // The tag below includes the markup for each post - components/common/PostCard.js
-                            <PostCard key={node.id} post={node} />
-                        ))}
-                    </section>
-                    <Pagination pageContext={pageContext} />
-                </div>
-            </Layout>
-        </>
-    )
+	const posts = data.allGhostPost.edges
+	return (
+		<>
+			<MetaData location={location} />
+			<Layout isHome={false}>
+				<div className="blog-container">
+					<div className="container">
+						<div className="arlo_tm_title_holder news" style={{ paddingBottom: `50px` }}>
+							<h3>Blog</h3><span>Check out our latest News</span>
+						</div>
+						<div className="arlo_tm_section">
+							<section className="post-feed">
+								{posts.map(({ node }, index) => (
+									// The tag below includes the markup for each post - components/common/PostCard.js
+									<PostCard key={`${node.id}_${index}`} post={node} />
+								))}
+							</section>
+							<Pagination pageContext={pageContext} />
+						</div>
+					</div>
+				</div>
+			</Layout>
+		</>
+	)
 }
 
 Blog.propTypes = {
-    data: PropTypes.shape({
-        allGhostPost: PropTypes.object.isRequired,
-    }).isRequired,
-    location: PropTypes.shape({
-        pathname: PropTypes.string.isRequired,
-    }).isRequired,
-    pageContext: PropTypes.object,
+	data: PropTypes.shape({
+		allGhostPost: PropTypes.object.isRequired,
+	}).isRequired,
+	location: PropTypes.shape({
+		pathname: PropTypes.string.isRequired,
+	}).isRequired,
+	pageContext: PropTypes.object,
 }
 
 export default Blog

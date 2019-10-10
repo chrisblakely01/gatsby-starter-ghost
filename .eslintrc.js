@@ -35,7 +35,14 @@ module.exports = {
             "error",
             "as-needed",
             { "requireReturnForObjectLiteral": true }
-        ],
+		],
+		"indent": [
+			2,
+			"tab",
+			{
+				"SwitchCase": 1
+			}
+		],
         "jsx-quotes": ["error", "prefer-double"],
         "semi": ["error", "never"],
         "object-curly-spacing": ["error", "always"],
