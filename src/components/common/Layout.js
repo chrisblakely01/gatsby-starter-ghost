@@ -31,6 +31,7 @@ const DefaultLayout = ({ data, children, bodyClass }) => {
 				<style type="text/css">{`${site.codeinjection_styles}`}</style>
 				<link href="https://fonts.googleapis.com/css?family=Montserrat|Ubuntu" rel="stylesheet" />
 				<link href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap" rel="stylesheet" />
+
 				<body className={bodyClass} />
 			</Helmet>
 
@@ -119,9 +120,9 @@ const DefaultLayout = ({ data, children, bodyClass }) => {
 							{/* <!-- /LEFTPART --> */}
 							{/* <!-- RIGHTPART --> */}
 							{children}
+							{/* <!-- /RIGHTPART --> */}
 						</div>
 					</div>
-					{/* <!-- /RIGHTPART --> */}
 					<a className="arlo_tm_totop" href="#"></a>
 
 				</div>

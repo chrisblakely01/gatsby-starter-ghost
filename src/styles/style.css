@@ -341,7 +341,7 @@ img.svg{
 	height: auto;
 	clear: both;
 	float: left;
-	margin-bottom: 100px;
+
 	
 	-webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
 	   -moz-box-sizing: border-box; /* Firefox, other Gecko */
@@ -1162,6 +1162,53 @@ img.svg{
 /*---------------------------------------------------*/
 /*	06) ARLO PORTFOLIO
 /*---------------------------------------------------*/
+.portfolio-grid-container {
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	grid-template-rows: auto auto;
+	grid-gap: 20px 20px;
+	/* background-color: #343e48; */
+	padding: 10px;
+}
+/* .portfolio-grid-item {
+	background-color: rgba(255, 255, 255, 0.8);
+	border: 1px solid rgba(0, 0, 0, 0.8);
+	padding: 20px;
+	font-size: 30px;
+	text-align: center;
+} */
+
+
+.portfolio-grid-item-1 {
+	grid-column-start: 1;
+	grid-column-end: 3;
+	background-color: #343e48;
+	padding: 20px;
+	font-size: 30px;
+	text-align: center;
+	grid-gap: 15px 15px;
+}
+
+.portfolio-grid-item-2 {
+	grid-column-start: 1;
+	grid-column-end: 2;
+	grid-row-start: 2;
+	background-color: rgba(255, 255, 255, 0.8);
+	/* padding: 20px; */
+	font-size: 30px;
+	text-align: center;
+}
+
+.portfolio-grid-item-3 {
+	grid-row-start: 2;
+	grid-column-start: 2;
+	grid-column-end: 2;
+	background-color: rgba(255, 255, 255, 0.8);
+	/* padding: 20px; */
+	font-size: 30px;
+	text-align: center;
+}
+
 
 .arlo_tm_title_holder.portfolio{padding-bottom: 90px;}
 .arlo_tm_portfolio_wrapper_all{
@@ -2090,7 +2137,7 @@ img.svg{
 	height: auto;
 	clear: both;
 	float: left;
-	padding-top: 150px;
+	/* padding-top: 150px; */
 	
 	-webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
 	   -moz-box-sizing: border-box; /* Firefox, other Gecko */
@@ -2134,10 +2181,13 @@ img.svg{
     color: #000000;
     line-height: 1;
 	margin-bottom: 20px;
+	margin-top: 0;
 }
 .arlo_tm_portfolio_single_wrap .details_wrap .short_list ul{
 	margin: 0px;
 	list-style-type: none;
+	margin-bottom: 20px;
+	padding: 0;
 }
 .arlo_tm_portfolio_single_wrap .details_wrap .short_list ul li{margin: 0px 0px 3px 0px;}
 .arlo_tm_portfolio_single_wrap .details_wrap .short_list ul li:last-child{margin-bottom: 0px;}
