@@ -369,8 +369,8 @@ blockquote {
 
 ol,
 ul {
-    padding-left: 1.3em;
-    padding-right: 1.5em;
+    /* padding-left: 1.3em;
+    padding-right: 1.5em; */
 }
 
 ol ol,
@@ -395,7 +395,7 @@ ol {
 
 li {
     margin: 0.5em 0;
-    padding-left: 0.3em;
+    /* padding-left: 0.3em; */
     line-height: 1.6em;
 }
 

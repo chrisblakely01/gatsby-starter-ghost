@@ -4,12 +4,14 @@ import React, { useEffect } from 'react'
 import meImage from '../img/me.jpg'
 
 import { Layout } from '../components/common'
+import { Link } from 'gatsby';
 import { MetaData } from '../components/common/meta'
 import Fade from 'react-reveal/Fade';
 import { Parallax, Background } from 'react-parallax';
 import GGFeature from '../img/gg-logo-2.png';
-import BeezerFeature from '../img/beezer-logo.jpeg';
+import BeezerFeature from '../img/beezer.png';
 import NantFeature from '../img/nant-logo.jpg';
+import EatStreetFeature from '../img/eat-street-logo.png';
 
 /**
 * Main index page (home page)
@@ -39,7 +41,6 @@ const Home = () => {
 								bgImageStyle={{ top: '250px' }}
 
 							>
-
 								<div className="content hero">
 									<div className="inner_content">
 										<div className="image_wrap">
@@ -157,7 +158,8 @@ const Home = () => {
 									<div className="arlo_tm_mini_title_holder">
 										{/* <h4>Some About my Abilities</h4> */}
 									</div>
-									<p>Over the past 5 years I have built cloud software that has enabled startups and small businesses to go from the MVP stage to having paying customers. I know the importance of speed and cost when it comes to early stage business. Using the latest technologies, I can help solve your business problems. </p>
+									<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. </p>
+									{/* <p>Over the past 5 years I have built cloud software that has enabled startups and small businesses to go from the MVP stage to having paying customers. I know the importance of speed and cost when it comes to early stage business. Using the latest technologies, I can help solve your business problems. </p> */}
 								</div>
 								<div className="rightbox">
 									<div className="progress_bar_wrap_total">
@@ -216,10 +218,10 @@ const Home = () => {
 													<img className="svg" src="img/svg/camera-diaphragm.svg" alt="" />
 												</div>
 												<div className="title_service">
-													<h3>Photography</h3>
+													<h3>Service 1</h3>
 												</div>
 												<div className="text">
-													<p>Web design is a similar process of creation, with the intention of presenting the content on electronic pages ...</p>
+													<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s</p>
 												</div>
 											</div>
 										</li>
@@ -229,10 +231,10 @@ const Home = () => {
 													<img className="svg" src="img/svg/new-tab.svg" alt="" />
 												</div>
 												<div className="title_service">
-													<h3>Web Design</h3>
+													<h3>Service 2</h3>
 												</div>
 												<div className="text">
-													<p>Web design is a similar process of creation, with the intention of presenting the content on electronic pages ...</p>
+													<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s</p>
 												</div>
 											</div>
 										</li>
@@ -242,10 +244,10 @@ const Home = () => {
 													<img className="svg" src="img/svg/layers.svg" alt="" />
 												</div>
 												<div className="title_service">
-													<h3>Branding</h3>
+													<h3>Service 2</h3>
 												</div>
 												<div className="text">
-													<p>Web design is a similar process of creation, with the intention of presenting the content on electronic pages ...</p>
+													<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s</p>
 												</div>
 											</div>
 										</li>
@@ -257,10 +259,10 @@ const Home = () => {
 													<img className="svg" src="img/svg/share.svg" alt="" />
 												</div>
 												<div className="title_service">
-													<h3>Social Media</h3>
+													<h3>Service 2</h3>
 												</div>
 												<div className="text">
-													<p>Web design is a similar process of creation, with the intention of presenting the content on electronic pages ...</p>
+													<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s</p>
 												</div>
 											</div>
 										</li>
@@ -270,23 +272,20 @@ const Home = () => {
 													<img className="svg" src="img/svg/adobe-illustrator.svg" alt="" />
 												</div>
 												<div className="title_service">
-													<h3>Illustrator</h3>
+													<h3>Service 2</h3>
 												</div>
 												<div className="text">
-													<p>Web design is a similar process of creation, with the intention of presenting the content on electronic pages ...</p>
+													<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s</p>
 												</div>
 											</div>
 										</li>
 										<li>
 											<div className="inner">
-												<div className="icon">
-													<img className="svg" src="img/svg/seo-performance-marketing-graphic.svg" alt="" />
-												</div>
 												<div className="title_service">
-													<h3>Marketing</h3>
+													<h3>Service 2</h3>
 												</div>
 												<div className="text">
-													<p>Web design is a similar process of creation, with the intention of presenting the content on electronic pages ...</p>
+													<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s</p>
 												</div>
 											</div>
 										</li>
@@ -308,19 +307,30 @@ const Home = () => {
 							<div className="container">
 								<div className="arlo_tm_portfolio_wrap">
 									<div className="arlo_tm_title_holder portfolio">
-										<h3>Creative Works</h3>
-										<span>Check out our latest creative works</span>
+										<h3>Latest Work</h3>
+										<span>Check out my latest work</span>
 									</div>
 									<div className="arlo_tm_portfolio_titles"></div>
 									<div class="portfolio-grid-container">
-										<div class="portfolio-grid-item-1">
-											<img src={GGFeature} alt="" />
+										<div class="portfolio-grid-item-top-1">
+											<Link to="/works/giggrafter-scheduler">
+												<img src={GGFeature} alt="Giggrafter" />
+											</Link>
 										</div>
-										<div class="portfolio-grid-item-2">
-											<img src={BeezerFeature} alt="" />
+										{/* <div class="portfolio-grid-item-top-2">
+											<img src={EatStreetFeature} alt="" />
+										</div> */}
+										<div class="portfolio-grid-item-bottom-1">
+											<Link to="/works/beezer">
+												<img src={BeezerFeature} alt="Beezer" />
+											</Link>
+
 										</div>
-										<div class="portfolio-grid-item-3">
-											<img src={NantFeature} alt="" />
+										<div class="portfolio-grid-item-bottom-2">
+											<Link to="/works/nanthealth">
+												<img src={NantFeature} alt="Nant Health" />
+											</Link>
+
 										</div>
 									</div>
 								</div>
@@ -353,7 +363,7 @@ const Home = () => {
 																	<i className="xcon-quote-left"></i>
 																</div>
 																<div className="definitions_wrap">
-																	<p>“Arlo team are easy to work with and helped me make amazing websites in a short amount of time. Thanks guys for works.”</p>
+																	<p>“The team are easy to work with and helped me make amazing websites in a short amount of time. Thanks guys for works.”</p>
 																</div>
 																<div className="name_holder">
 																	<p>Antonio Baraley, CEO Founder</p>
@@ -366,7 +376,7 @@ const Home = () => {
 																	<i className="xcon-quote-left"></i>
 																</div>
 																<div className="definitions_wrap">
-																	<p>“We were looking for a logo with a touch of modernism. Arlo grasped our needs and produced a stunning design.”</p>
+																	<p>“We were looking for a logo with a touch of modernism. The teama grasped our needs and produced a stunning design.”</p>
 																</div>
 																<div className="name_holder">
 																	<p>Calena Gomez, AOC Designer</p>
@@ -426,8 +436,8 @@ const Home = () => {
 					<div className="arlo_tm_news_wrap" >
 						<div className="container">
 							<div className="arlo_tm_title_holder news" id="news">
-								<h3>Latest News</h3>
-								<span>Check out our latest News</span>
+								<h3>Writing</h3>
+								<span>Check out my writing. I've written for major tech publications such as FreeCodeCamp.org, Hackernoon and Medium</span>
 							</div>
 							<div className="arlo_tm_list_wrap blog_list">
 								<ul className="total">

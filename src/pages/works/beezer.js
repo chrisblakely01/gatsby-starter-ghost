@@ -7,18 +7,18 @@ import IntroImage2 from '../../img/blog/1.jpg';
 import FeatureImage1 from '../../img/blog/1.jpg';
 import FeatureImage2 from '../../img/blog/1.jpg';
 
-const GiggrafterScheduler = () =>
+const Beezer = () =>
     <>
         <MetaData location={location} />
         <Layout>
             <div class="arlo_tm_portfolio_single_wrap">
                 <div class="container">
                     <div class="title_holder">
-                        <h3>Giggrafter Scheduler</h3>
+                        <h3>Beezer Platform</h3>
                     </div>
                     <div class="details_wrap">
                         <div class="leftbox">
-                            <img src={IntroImage1} alt="Giggrafter scheduler logo" style={{ marginBottom: '10px' }} />
+                            <img src={IntroImage1} alt="" style={{ marginBottom: '10px' }} />
                             <img src={IntroImage2} alt="" />
                         </div>
                         <div class="rightbox">
@@ -36,29 +36,27 @@ const GiggrafterScheduler = () =>
                                         <span class="second">SaaS cloud application</span>
                                     </li>
                                     <li>
-                                        <span class="first">Website :</span>
-                                        <span class="second">www.giggrafter.com</span>
+                                        <span class="first">Technologies :</span>
+                                        <span class="second">Java, Spring Boot, AWS, Kubernetes, Docker</span>
                                     </li>
                                     <li>
-                                        <span class="first">Technologies :</span>
-                                        <span class="second">React.js, Redux, Java, Spring Boot, AWS, Postgres, Git</span>
+                                        <span class="first">Integrations :</span>
+                                        <span class="second">Striple, GAA</span>
                                     </li>
                                 </ul>
                             </div>
-                            <p>Giggrafter rota software helps users to create, publish and manage budgeted rotas
-                                in minutes allowing them to respond quickly to changing employee availability or business need.</p>
+                            <p>Beezer was a cloud platform that allows sports clubs and organisations to create and interact with their community of teams, fans and members.</p>
                             <p>
-                                My role as the software developer in the company was to architect, design, and implement business critical features, across web and mobile.
-                                The process followed software development best practices which I enforced; 2 week sprints, standups, code reviews, and early testing and demos.
+                                My role as a software developer in the company was to design, and implement microservices that were key to the Beezer platform. The Beezer platform was used to power the Official GAA App.
                             </p>
                             <p>
-                                The main challenge I faced was balancing speed, code quality and business impact when designing and implementing product features.
-                                Key accomplishments include rearchitecting and rebuilding the web application in 5 weeks. This provided performance improvements and better UI interactions,
-                                allowing for a better user experience.
+                                The main challenge I faced was coordinating with other teams and third partys, to ensure quick efficient release of product features.
+                                Key accomplishments include creating a notification service, allow sports club members to recieve notifications from their sports clubs, and creating a payment service, which allowed sports clubs and organisations to accept payments 
+                                from members via the app.
                             </p>
 
                             <p>
-                                My efforts for Giggrafter resulted in the company onboarding over 50 users, and over 10,000 shifts being scheduled at time of writing.
+                                My efforts for Beezer formed the groundwork which allowed the creation of the Offical GAA app, processing 1000's of notifications and 100's of payments from club members.
                             </p>
                         </div>
                     </div>
@@ -85,4 +83,4 @@ const GiggrafterScheduler = () =>
         </Layout>
     </>
 
-export default GiggrafterScheduler;
+export default Beezer;

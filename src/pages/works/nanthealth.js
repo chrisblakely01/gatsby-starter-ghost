@@ -7,18 +7,18 @@ import IntroImage2 from '../../img/blog/1.jpg';
 import FeatureImage1 from '../../img/blog/1.jpg';
 import FeatureImage2 from '../../img/blog/1.jpg';
 
-const GiggrafterScheduler = () =>
+const NantHealth = () =>
     <>
         <MetaData location={location} />
         <Layout>
             <div class="arlo_tm_portfolio_single_wrap">
                 <div class="container">
                     <div class="title_holder">
-                        <h3>Giggrafter Scheduler</h3>
+                        <h3>Nanthealth Health Notebook</h3>
                     </div>
                     <div class="details_wrap">
                         <div class="leftbox">
-                            <img src={IntroImage1} alt="Giggrafter scheduler logo" style={{ marginBottom: '10px' }} />
+                            <img src={IntroImage1} alt="" style={{ marginBottom: '10px' }} />
                             <img src={IntroImage2} alt="" />
                         </div>
                         <div class="rightbox">
@@ -29,36 +29,33 @@ const GiggrafterScheduler = () =>
                                 <ul>
                                     <li>
                                         <span class="first">Company Type :</span>
-                                        <span class="second">Startup</span>
+                                        <span class="second">Multinational Enterprise</span>
                                     </li>
                                     <li>
                                         <span class="first">Category :</span>
-                                        <span class="second">SaaS cloud application</span>
+                                        <span class="second">Mobile first SaaS cloud application</span>
                                     </li>
                                     <li>
                                         <span class="first">Website :</span>
-                                        <span class="second">www.giggrafter.com</span>
+                                        <span class="second">www.nanthealth.com/</span>
                                     </li>
                                     <li>
                                         <span class="first">Technologies :</span>
-                                        <span class="second">React.js, Redux, Java, Spring Boot, AWS, Postgres, Git</span>
+                                        <span class="second">Angular, Java, Spring Boot, AWS, kubernetes</span>
                                     </li>
                                 </ul>
                             </div>
-                            <p>Giggrafter rota software helps users to create, publish and manage budgeted rotas
-                                in minutes allowing them to respond quickly to changing employee availability or business need.</p>
+                            <p>Nanthealth is a healthcare platform based in California. The company is focused on developing and marketing a range of healthcare solutions.</p>
                             <p>
-                                My role as the software developer in the company was to architect, design, and implement business critical features, across web and mobile.
-                                The process followed software development best practices which I enforced; 2 week sprints, standups, code reviews, and early testing and demos.
+                                My role as a software developer in the company was to design, and implement microservices and mobile views that were key to the Health Notebook application. 
+                                Health Notebook tracks fitness activity, and syncs with popular fitness devices such as Garmin and FitBit
                             </p>
                             <p>
-                                The main challenge I faced was balancing speed, code quality and business impact when designing and implementing product features.
-                                Key accomplishments include rearchitecting and rebuilding the web application in 5 weeks. This provided performance improvements and better UI interactions,
-                                allowing for a better user experience.
+                                The main challenge I faced was designing user interfaces that allowed large amounts of data to be displayed in a mobile first, user friendly manner.
+                                Key accomplishments include creating and maintaining the Insurance feature, allowing users to add and manage their insurance information through the app.
                             </p>
-
                             <p>
-                                My efforts for Giggrafter resulted in the company onboarding over 50 users, and over 10,000 shifts being scheduled at time of writing.
+                                My efforts for NantHealth meant that the Health Notebook application was completed in a timely manner and rolled out to large enterprise's such as BT, who's 1000's of staff benefited from the application.
                             </p>
                         </div>
                     </div>
@@ -85,4 +82,4 @@ const GiggrafterScheduler = () =>
         </Layout>
     </>
 
-export default GiggrafterScheduler;
+export default NantHealth;
