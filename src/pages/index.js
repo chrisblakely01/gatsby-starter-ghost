@@ -24,7 +24,7 @@ import EatStreetFeature from '../img/eat-street-logo.png';
 const Home = () => {
 	return (
 		<>
-			<MetaData location={location} />
+			{/* <MetaData /> */}
 			<Layout isHome={true}>
 				<div className="arlo_tm_section" id="home">
 					<div className="arlo_tm_hero_header_wrap">

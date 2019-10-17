@@ -9,7 +9,6 @@ import FeatureImage2 from '../../img/blog/1.jpg';
 
 const NantHealth = () =>
     <>
-        <MetaData location={location} />
         <Layout>
             <div class="arlo_tm_portfolio_single_wrap">
                 <div class="container">
