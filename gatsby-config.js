@@ -46,13 +46,13 @@ module.exports = {
         },
         // Setup for optimised images.
         // See https://www.gatsbyjs.org/packages/gatsby-image/
-        {
-            resolve: `gatsby-source-filesystem`,
-            options: {
-                path: path.join(__dirname, `src`, `images`),
-                name: `images`,
-            },
-        },
+        // {
+        //     resolve: `gatsby-source-filesystem`,
+        //     options: {
+        //         path: path.join(__dirname, `src`, `images`),
+        //         name: `images`,
+        //     },
+        // },
         `gatsby-plugin-sharp`,
         `gatsby-transformer-sharp`,
         {
