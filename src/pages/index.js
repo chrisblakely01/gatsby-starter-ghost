@@ -47,7 +47,8 @@ const Home = () => {
 										<h3>Chris <span>Blakely</span></h3>
 									</div>
 									<div className="text_typing">
-										<p> I'm a <span style={{ color: '#E3872D' }}>software developer</span> who helps startups and SME's build their apps, products and services</p>
+										{/* <p> I'm a <span style={{ color: '#E3872D' }}>software developer</span> who helps startups and SME's build their apps, products and services</p> */}
+										<p> Lorem Ipsum is simply dummy text of the printing and typesetting industry. </p>
 									</div>
 								</div>
 							</div>
