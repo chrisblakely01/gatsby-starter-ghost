@@ -5,13 +5,17 @@ import meImage from '../img/me.jpg'
 
 import { Layout } from '../components/common'
 import { Link } from 'gatsby';
-import { MetaData } from '../components/common/meta'
+import 'font-awesome/css/font-awesome.min.css';
 import Fade from 'react-reveal/Fade';
-import { Parallax, Background } from 'react-parallax';
+
 import GGFeature from '../img/gg-logo-2.png';
 import BeezerFeature from '../img/beezer.png';
 import NantFeature from '../img/nant-logo.jpg';
-import EatStreetFeature from '../img/eat-street-logo.png';
+import ClickEnergyFeature from '../img/click-energy-logo.png';
+import FreeCodeCampLogo from '../img/freecodecamp-logo.jpg';
+import HackernoonLogo from '../img/hackernoon-logo.png';
+import BelfastCityAirportFeature from '../img/belfast-city-airport-logo.png';
+
 
 /**
 * Main index page (home page)
@@ -30,31 +34,23 @@ const Home = () => {
 					<div className="arlo_tm_hero_header_wrap">
 						<div className="arlo_tm_universal_box_wrap">
 							<div className="bg_wrap">
+								<div className="overlay_image hero jarallax" data-speed="0"></div>
 
 								<div className="overlay_color hero"></div>
 							</div>
-							<Parallax
-								blur={0}
-								bgImage={require('../img/bg3.jpg')}
-								bgImageAlt="the cat"
-								strength={500}
-								bgImageStyle={{ top: '250px' }}
-
-							>
-								<div className="content hero">
-									<div className="inner_content">
-										<div className="image_wrap">
-											<img src={meImage} alt="" />
-										</div>
-										<div className="name_holder">
-											<h3>Chris <span>Blakely</span></h3>
-										</div>
-										<div className="text_typing">
-											<p>I'm here to help solve your business problems with web technologies</p>
-										</div>
+							<div className="content hero">
+								<div className="inner_content">
+									<div className="image_wrap">
+										<img src={meImage} alt="" />
+									</div>
+									<div className="name_holder">
+										<h3>Chris <span>Blakely</span></h3>
+									</div>
+									<div className="text_typing">
+										<p> I'm a <span style={{ color: '#E3872D' }}>software developer</span> who helps startups and SME's build their apps, products and services</p>
 									</div>
 								</div>
-							</Parallax>
+							</div>
 
 							<div className="arlo_tm_arrow_wrap bounce anchor">
 								<a href="#about"><i className="xcon-angle-double-down"></i></a>
@@ -146,7 +142,7 @@ const Home = () => {
 				{/* <!-- /ABOUT --> */}
 
 				{/* <!-- ABOUT/SKILLS --> */}
-				<div className="arlo_tm_section">
+				<div className="arlo_tm_section" id="about">
 					<div className="arlo_tm_skills_wrap">
 						<div className="container">
 							<div className="arlo_tm_title_holder">
@@ -159,11 +155,13 @@ const Home = () => {
 										{/* <h4>Some About my Abilities</h4> */}
 									</div>
 									<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. </p>
-									{/* <p>Over the past 5 years I have built cloud software that has enabled startups and small businesses to go from the MVP stage to having paying customers. I know the importance of speed and cost when it comes to early stage business. Using the latest technologies, I can help solve your business problems. </p> */}
+									{/* <p>Over the past 5 years I have built cloud software that has enabled startups and small businesses to go from the MVP stage to having paying customers.
+									I know the importance of speed and cost when it comes to early stage business. WORKING TO BUDGETS {QUALITY}. Here's my toolset - if you don't know what any of these are, don't worry - These are simply the latest in software development technologies. Anyway enough about me,
+									check out my services and previous work below, or get in touch.</p> */}
 								</div>
 								<div className="rightbox">
 									<div className="progress_bar_wrap_total">
-										<div className="arlo_tm_progress_wrap" data-size="small" data-round="c" data-strip="off">
+										{/* <div className="arlo_tm_progress_wrap" data-size="small" data-round="c" data-strip="off">
 											<div className="arlo_tm_progress" data-value="95" data-color="#000">
 												<span><span className="label">Software Development - <span className="experience">5 years of experience</span></span><span className="number">95%</span></span>
 												<div className="arlo_tm_bar_bg"><div className="arlo_tm_bar_wrap open"><div className="arlo_tm_bar" style={{ width: '95%' }}></div></div></div>
@@ -180,7 +178,106 @@ const Home = () => {
 												<span><span className="label">App Development - <span className="experience">2 years of experience</span></span><span className="number">60%</span></span>
 												<div className="arlo_tm_bar_bg"><div className="arlo_tm_bar_wrap open"><div className="arlo_tm_bar" style={{ width: '60%' }}></div></div></div>
 											</div>
-										</div>
+										</div> */}
+
+										<ul className="chip-list">
+											<li className="chip">
+												HTML
+											</li>
+
+											<li className="chip">
+												JavaScript
+											</li>
+
+											<li className="chip">
+												CSS
+											</li>
+
+											<li className="chip">
+												SCSS
+											</li>
+											<li className="chip">
+												Bootstrap
+											</li>
+											<li className="chip">
+												Material UI
+											</li>
+											<li className="chip">
+												jQuery
+											</li>
+											<li className="chip">
+												React.js
+											</li>
+											<li className="chip">
+												Redux
+											</li>
+											<li className="chip">
+												Angular 8
+											</li>
+											<li className="chip">
+												Vue.js
+											</li>
+											<li className="chip">
+												Gatsby.js
+											</li>
+											<li className="chip">
+												Node.js
+											</li>
+											<li className="chip">
+												React Native
+											</li>
+											<li className="chip">
+												Ionic
+											</li>
+											<li className="chip">
+												Babel
+											</li>
+											<li className="chip">
+												Webpack
+											</li>
+											<li className="chip">
+												JSON
+											</li>
+											<li className="chip">
+												NPM/Yarn
+											</li>
+											<li className="chip">
+												Java
+											</li>
+											<li className="chip">
+												Spring Boot
+											</li>
+											<li className="chip">
+												Amazon Web Services
+											</li>
+											<li className="chip">
+												Postgres SQL
+											</li>
+											<li className="chip">
+												MongoDB
+											</li>
+											<li className="chip">
+												MySQL
+											</li>
+											<li className="chip">
+												REST API's
+											</li>
+											<li className="chip">
+												GraphQL
+											</li>
+											<li className="chip">
+												OAuth
+											</li>
+											<li className="chip">
+												End To End Testing
+											</li>
+											<li className="chip">
+												Integration Testing
+											</li>
+											<li className="chip">
+												Unit Testing
+											</li>
+										</ul>
 									</div>
 								</div>
 							</div>
@@ -218,7 +315,7 @@ const Home = () => {
 													<img className="svg" src="img/svg/camera-diaphragm.svg" alt="" />
 												</div>
 												<div className="title_service">
-													<h3>Service 1</h3>
+													<h3>Service</h3>
 												</div>
 												<div className="text">
 													<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s</p>
@@ -231,7 +328,7 @@ const Home = () => {
 													<img className="svg" src="img/svg/new-tab.svg" alt="" />
 												</div>
 												<div className="title_service">
-													<h3>Service 2</h3>
+													<h3>Service</h3>
 												</div>
 												<div className="text">
 													<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s</p>
@@ -244,7 +341,7 @@ const Home = () => {
 													<img className="svg" src="img/svg/layers.svg" alt="" />
 												</div>
 												<div className="title_service">
-													<h3>Service 2</h3>
+													<h3>Service</h3>
 												</div>
 												<div className="text">
 													<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s</p>
@@ -259,7 +356,7 @@ const Home = () => {
 													<img className="svg" src="img/svg/share.svg" alt="" />
 												</div>
 												<div className="title_service">
-													<h3>Service 2</h3>
+													<h3>Service</h3>
 												</div>
 												<div className="text">
 													<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s</p>
@@ -272,7 +369,7 @@ const Home = () => {
 													<img className="svg" src="img/svg/adobe-illustrator.svg" alt="" />
 												</div>
 												<div className="title_service">
-													<h3>Service 2</h3>
+													<h3>Service</h3>
 												</div>
 												<div className="text">
 													<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s</p>
@@ -281,8 +378,11 @@ const Home = () => {
 										</li>
 										<li>
 											<div className="inner">
+												<div className="icon">
+													<img className="svg" src="img/svg/adobe-illustrator.svg" alt="" />
+												</div>
 												<div className="title_service">
-													<h3>Service 2</h3>
+													<h3>Service</h3>
 												</div>
 												<div className="text">
 													<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s</p>
@@ -311,26 +411,39 @@ const Home = () => {
 										<span>Check out my latest work</span>
 									</div>
 									<div className="arlo_tm_portfolio_titles"></div>
-									<div class="portfolio-grid-container">
-										<div class="portfolio-grid-item-top-1">
+									<div className="main-work-grid-container" style={{ marginBottom: '70px' }}>
+										<div className="work-item">
 											<Link to="/works/giggrafter-scheduler">
 												<img src={GGFeature} alt="Giggrafter" />
+												<div className="main-work-link">
+													Click for more info <i class="fa fa-arrow-right"></i>
+												</div>
 											</Link>
 										</div>
-										{/* <div class="portfolio-grid-item-top-2">
+										{/* <div className="portfolio-grid-item-top-2">
 											<img src={EatStreetFeature} alt="" />
 										</div> */}
-										<div class="portfolio-grid-item-bottom-1">
-											<Link to="/works/beezer">
-												<img src={BeezerFeature} alt="Beezer" />
-											</Link>
-
+									</div>
+									<div className="arlo_tm_title_holder portfolio">
+										<h3>Other Work</h3>
+										<span>Here's some of the other company's I've worked with. If you would like to know more <a href="/#contact">get in touch!</a></span>
+									</div>
+									<div className="arlo_tm_portfolio_titles"></div>
+									<div className="other-work-grid-container">
+										{/* <div className="portfolio-grid-item-top-2">
+											<img src={EatStreetFeature} alt="" />
+										</div> */}
+										<div className="other-work-item">
+											<img src={BeezerFeature} alt="Beezer" />
 										</div>
-										<div class="portfolio-grid-item-bottom-2">
-											<Link to="/works/nanthealth">
-												<img src={NantFeature} alt="Nant Health" />
-											</Link>
-
+										<div className="other-work-item">
+											<img src={NantFeature} alt="Nant Health" />
+										</div>
+										<div className="other-work-item">
+											<img src={BelfastCityAirportFeature} alt="Belfast City Airport" />
+										</div>
+										<div className="other-work-item">
+											<img style={{ width: '65%' }} src={ClickEnergyFeature} alt="Click Energy" />
 										</div>
 									</div>
 								</div>
@@ -445,23 +558,17 @@ const Home = () => {
 										<li className="wow fadeInUp" data-wow-duration="1.2s">
 											<div className="inner_list">
 												<div className="image_wrap">
-													<img className="small" src="img/blog/500x350.jpg" alt="" />
-													<img className="big" src="img/blog/1170x450.jpg" alt="" />
+													<img className="small" src={FreeCodeCampLogo} alt="" />
+													<img className="big" src={FreeCodeCampLogo} alt="" />
 													<div className="news_image" data-url="img/blog/1.jpg"></div>
 													<a className="link_news" href="index.html"></a>
 												</div>
 												<div className="definitions_wrap">
-													<div className="date_wrap">
-														<p>January 22, 2018 <a href="index.html">Logos</a></p>
-													</div>
 													<div className="title_holder">
-														<h3><a href="index.html">How to Create Great Logo for Your Business</a></h3>
+														<h3><a href="">How Developers Think: A Walkthrough of the Planning and Design Behind a Simple Web App</a></h3>
 													</div>
 													<div className="definition">
-														<p>If you are reading this, you probably plan to start a small business or a side hustle very soon. And you probably have ...</p>
-													</div>
-													<div className="full_def">
-														<p>If you are reading this, you probably plan to start a small business or a side hustle very soon. And you probably have a couple of questions running through your mind like: Do I really need that logo? Or Yep, I really need one. But how can I get it on a budget? This post was created to help you bring system out of confusion so you can get the best out of your business and enter the market full force. First of all, yes, you do need a logo, and it does not really matter how big or small your business is. Even if you  making a craft soap and sell it to your relatives and friends, you still need a logo. If you plan to monetize an idea, you need a logo for it. Otherwise your work, your efforts, your image and your future brand belong to everyone, like grapes at a grocery store. But most importantly, the final design you come up with should be effective enough to promote your business and get you that place in the sun. Here are a few tips that will make the whole process easier and more fun. The first step to a killer logo is an idea. So start feeding your brain with new impressions and experiences. Use anything that works for you. Try hiking and gain inspiration from nature. Or visit an art gallery. Meditation, photography, action sports In a nutshell, any kind of activity that fills you up with energy and joy may help you get that revolutionary idea. It is always useful to browse the websites (or social media profiles) of your potential rivals to not only judge their logos but to practice analysis. Do you find your competitor logo effective or attractive? Try to think of the ways it helps the rival company to be profitable. Is there something you would change? Why? All of these questions can really help you to improve your own perception of your brand as well as the future marketing strategy. Find out what the strengths and weaknesses of your rivals are and benefit from that knowledge. When it comes to logo design, there are and always will be several safe choices like bold and elegant black and white logos or serif font wordmarks. But if you are striving to get that killer logo, do not be afraid to cross the line and try something rebellious. Go out there and get to know the latest design trends. For example, you may experiment with the bold colors like Ultra Violet, which is the Pantone color of the year, by the way. Or play with the typography and color gradients.</p>
+														<p>Good code starts with good planning. In this article I talk about the steps to plan and design a simple web application, producing efficent more robust code</p>
 													</div>
 													<div className="arlo_tm_popup_share_wrap">
 														<ul>
@@ -472,7 +579,7 @@ const Home = () => {
 														</ul>
 													</div>
 													<div className="read_more">
-														<a href="#"><span>Read More</span></a>
+														<a href="https://www.freecodecamp.org/news/a-walk-through-the-developer-thought-process/" target="_blank"><span>Read More</span></a>
 													</div>
 												</div>
 											</div>
@@ -480,23 +587,17 @@ const Home = () => {
 										<li className="wow fadeInUp" data-wow-duration="1.2s" data-wow-delay="0.2s">
 											<div className="inner_list">
 												<div className="image_wrap">
-													<img className="small" src="img/blog/500x350.jpg" alt="" />
-													<img className="big" src="img/blog/1170x450.jpg" alt="" />
+													<img className="small" src={FreeCodeCampLogo} alt="" />
+													<img className="big" src={FreeCodeCampLogo} alt="" />
 													<div className="news_image" data-url="img/blog/2.jpg"></div>
 													<a className="link_news" href="index.html"></a>
 												</div>
 												<div className="definitions_wrap">
-													<div className="date_wrap">
-														<p>February 07, 2018 <a href="index.html">Illustrator</a></p>
-													</div>
 													<div className="title_holder">
-														<h3><a href="index.html">How to Autumn Clean Your Design Career?</a></h3>
+														<h3><a href="index.html">The junior developer’s guide to writing super clean and readable code</a></h3>
 													</div>
 													<div className="definition">
-														<p>Spring cleaning is not just about washing windows and clearing away cobwebs. Your design career also needs a thorough ...</p>
-													</div>
-													<div className="full_def">
-														<p>Whether you are a freelancer or an in-house designer, or at a studio or agency, you will probably have to rebrand at the and Whether you are a freelancer or an in-house designer, or at a studio or agency, you will probably have to rebrand at the and Whether yo are a freelancer or an in-house designer, or at a studio or agency, you'll probably have to rebrand at the andWhether you are a freelancer or an in-house designer, or at a studio or agency, you will probably have to rebrand at the andWhether yo are a freelancer or an in-house designer, or at a studio or agency, you will probably have to rebrand at the and.Whether you are a freelancer or an in-house designer, or at a studio or agency, you will probably have to rebrand at the and Whether you are a freelancer or an in-house designer, or at a studio or agency, you will probably have to rebrand at the andWhether youa are a freelancer or an in-house designer, or at a studio or agency.</p>
+														<p>It can be easier to write code that a computer can understand, and much harder to write code than other developers can understand. This article, aimed at junior developers, describes some common techniques to write clean, maintainable code</p>
 													</div>
 													<div className="arlo_tm_popup_share_wrap">
 														<ul>
@@ -507,7 +608,7 @@ const Home = () => {
 														</ul>
 													</div>
 													<div className="read_more">
-														<a href="#"><span>Read More</span></a>
+														<a href="https://www.freecodecamp.org/news/the-junior-developers-guide-to-writing-super-clean-and-readable-code-cd2568e08aae/" target="_blank"><span>Read More</span></a>
 													</div>
 												</div>
 											</div>
@@ -515,23 +616,21 @@ const Home = () => {
 										<li className="wow fadeInUp" data-wow-duration="1.2s" data-wow-delay="0.4s">
 											<div className="inner_list">
 												<div className="image_wrap">
-													<img className="small" src="img/blog/500x350.jpg" alt="" />
-													<img className="big" src="img/blog/1170x450.jpg" alt="" />
+													<img className="small" src={HackernoonLogo} alt="" style={{
+														padding: '25px',
+														marginTop: '15px',
+														paddingBottom: '0px',
+													}} />
+													<img className="big" src={HackernoonLogo} alt="" />
 													<div className="news_image" data-url="img/blog/3.jpg"></div>
 													<a className="link_news" href="index.html"></a>
 												</div>
 												<div className="definitions_wrap">
-													<div className="date_wrap">
-														<p>April 12, 2018 <a href="index.html">Branding</a></p>
-													</div>
 													<div className="title_holder">
-														<h3><a href="index.html">Innovative Ways to Increase Brand</a></h3>
+														<h3><a href="index.html">Ace your first year as a junior software developer with this advice</a></h3>
 													</div>
 													<div className="definition">
-														<p>Having a solid, trusted brand is important for your company to thrive. If your target audience does not know or trust ...</p>
-													</div>
-													<div className="full_def">
-														<p>Having a solid, trusted brand is important for your company to thrive. If your target audience does not know or trust your brand, how will you ever increase your customer base and sales? Here are six innovative strategies you can use to increase brand awareness and help your business thrive. Inviting influencers into your niche is a great way to increase brand awareness and hopefully drive sales. When influencers have an established audience that knows and trusts them, once they mention your product(s) and discuss your brand in their content, those mentions will expand your reach and increase peoples awareness of your product. Ikonick is a perfect example of a company that works directly with influencers: It sells canvas art for your home and office. The way Ikonick uses influencers involves providing them with art and having those influencers pose with the art, then share the photos on social media. "Our relationships are an important part of our business,"  co-founder Mark Mastrandrea told me. "Our relationships make up our community, and the community is how our brand grows." Ikonick uses all types of influencers, from Instagram photographers to celebrities. The companys social strategy has enabled it to scale and grow exponentially because its influencers become part of its sales team -- even ambassadors. The relationship is mutually rewarding, Mastrandrea said. Companies can also offer to sponsor influencers at an event (if they do that sort of thing) and even use them as spokespersons for their brand and product(s). A lot of CrossFit-related companies do this, including Rogue Fitness, which sponsors certain athletes with clothing. The athlete then becomes a walking billboard for the company. Have you ever received an order that came in branded packaging? Rather than see it as just another shipment, perhaps you felt that that that special branding made the package seem like a gift. The team knows that the product experience doesn't commence at first use, but rather at the unboxing stage. How companies present their brand, and the story they tell through their design and graphics, can create an emotional connection with the customer that may last even longer than the product itself.</p>
+														<p> Starting a career as a software developer can be tough. There are many unknowns, things to learn and nerves to overcome. In this article I talk about some key advice junior developers can follow to make sure they have a great first year in the software development industry </p>
 													</div>
 													<div className="arlo_tm_popup_share_wrap">
 														<ul>
@@ -542,7 +641,7 @@ const Home = () => {
 														</ul>
 													</div>
 													<div className="read_more">
-														<a href="#"><span>Read More</span></a>
+														<a href="https://hackernoon.com/ace-your-first-year-as-a-junior-developer-with-this-advice-3610t3cmk" target="_blank"><span>Read More</span></a>
 													</div>
 												</div>
 											</div>
@@ -573,9 +672,8 @@ const Home = () => {
 									<div className="short_info_wrap">
 										<ul>
 											<li><p><label>Address:</label><span>123 Qwerty Avenue NYC, USA</span></p></li>
-											<li><p><label>Email:</label><span><a href="mailto:example@gmail.com">example@gmail.com</a></span></p></li>
+											<li><p><label>Email:</label><span><a href="mailto:hi@chrisblakely.dev">hi@chrisblakely.dev</a></span></p></li>
 											<li><p><label>Phone:</label><span>+77 022 177 05 05</span></p></li>
-											<li><p><label>Website:</label><span><a href="mailto:example@gmail.com">www.yourdomain.com</a></span></p></li>
 										</ul>
 									</div>
 								</div>

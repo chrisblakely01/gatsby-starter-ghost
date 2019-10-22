@@ -36,7 +36,7 @@ const GiggrafterScheduler = () =>
                                     </li>
                                     <li>
                                         <span class="first">Website :</span>
-                                        <span class="second">www.giggrafter.com</span>
+                                        <span class="second"><a href="http://www.giggrafter.com" target="_blank">www.giggrafter.com</a></span>
                                     </li>
                                     <li>
                                         <span class="first">Technologies :</span>
@@ -44,7 +44,7 @@ const GiggrafterScheduler = () =>
                                     </li>
                                 </ul>
                             </div>
-                            <p>Giggrafter rota software helps users to create, publish and manage budgeted rotas
+                            <p> Giggrafter rota software helps users to create, publish and manage budgeted rotas
                                 in minutes allowing them to respond quickly to changing employee availability or business need.</p>
                             <p>
                                 My role as the software developer in the company was to architect, design, and implement business critical features, across web and mobile.
@@ -52,9 +52,10 @@ const GiggrafterScheduler = () =>
                             </p>
                             <p>
                                 The main challenge I faced was balancing speed, code quality and business impact when designing and implementing product features.
-                                Key accomplishments include rearchitecting and rebuilding the web application in 5 weeks. This provided performance improvements and better UI interactions,
-                                allowing for a better user experience.
+                                Key accomplishments include rearchitecting and rebuilding the rota view within the web application in 5 weeks. This provided performance improvements and better UI interactions,
+                                allowing for a better user experience. As well as this, I created a responsive mobile view in 3 weeks, allowing users to view their rota from mobile devices.
                             </p>
+
 
                             <p>
                                 My efforts for Giggrafter resulted in the company onboarding over 50 users, and over 10,000 shifts being scheduled at time of writing.
@@ -71,14 +72,14 @@ const GiggrafterScheduler = () =>
                             </li>
                         </ul>
                     </div>
-                    <div class="pagination_wrap">
+                    {/* <div class="pagination_wrap">
                         <div class="prev">
                             <a href="#">Prev</a>
                         </div>
                         <div class="next">
                             <a href="#">Next</a>
                         </div>
-                    </div>
+                    </div> */}
                 </div>
             </div>
         </Layout>

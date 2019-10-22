@@ -4,8 +4,6 @@ import PropTypes from 'prop-types'
 import Helmet from 'react-helmet'
 import { StaticQuery, graphql } from 'gatsby'
 
-import desktopLogo from '../../img/logo/desktop-logo.png'
-
 // Styles
 import '../../styles/app.css'
 import '../../styles/plugins.css'
@@ -31,7 +29,6 @@ const DefaultLayout = ({ data, children, bodyClass }) => {
 				<style type="text/css">{`${site.codeinjection_styles}`}</style>
 				<link href="https://fonts.googleapis.com/css?family=Montserrat|Ubuntu" rel="stylesheet" />
 				<link href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap" rel="stylesheet" />
-
 				<body className={bodyClass} />
 			</Helmet>
 
@@ -87,9 +84,12 @@ const DefaultLayout = ({ data, children, bodyClass }) => {
 					{/* <!-- LEFTPART --> */}
 					<div className="arlo_tm_leftpart_wrap">
 						<div className="leftpart_inner">
-							<div className="logo_wrap">
-								<a href="#"><img src={desktopLogo} alt="" /></a>
-							</div>
+							<a href="/">
+								<div className="logo_wrap">
+									Chris<span style={{ color: '#E3872D' }}>Blakely</span>.dev
+								{/* <a href="#"><img src={desktopLogo} alt="" /></a> */}
+								</div>
+							</a>
 							<div className="menu_list_wrap">
 								<ul className="anchor_nav">
 									<li><a href="/">Home</a></li>
@@ -112,7 +112,8 @@ const DefaultLayout = ({ data, children, bodyClass }) => {
 									</ul>
 								</div>
 							</div>
-							<a className="arlo_tm_resize" href="#"><i className="xcon-angle-left"></i></a>
+
+							{/* <a className="arlo_tm_resize" href="#"><i className="xcon-angle-left"></i></a> */}
 						</div>
 					</div>
 					<div className="arlo_tm_rightpart">
