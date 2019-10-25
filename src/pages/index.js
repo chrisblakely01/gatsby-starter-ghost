@@ -255,6 +255,9 @@ const Home = () => {
 												Ionic
 											</li>
 											<li className="chip">
+												Progressive Web Apps
+											</li>
+											<li className="chip">
 												Babel
 											</li>
 											<li className="chip">
@@ -274,6 +277,9 @@ const Home = () => {
 											</li>
 											<li className="chip">
 												Amazon Web Services
+											</li>
+											<li className="chip">
+												Firebase
 											</li>
 											<li className="chip">
 												Postgres SQL
@@ -325,10 +331,10 @@ const Home = () => {
 										<li>
 											<div className="inner">
 												<div className="icon">
-													<img className="svg" src="img/svg/camera-diaphragm.svg" alt="" />
+													<i class="fa fa-cloud fa-3x"></i>
 												</div>
 												<div className="title_service">
-													<h3>Service</h3>
+													<h3>Web Development</h3>
 												</div>
 												<div className="text">
 													<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s</p>
@@ -338,10 +344,10 @@ const Home = () => {
 										<li>
 											<div className="inner">
 												<div className="icon">
-													<img className="svg" src="img/svg/new-tab.svg" alt="" />
+													<i class="fa fa-mobile fa-5x"></i>
 												</div>
 												<div className="title_service">
-													<h3>Service</h3>
+													<h3>App Development</h3>
 												</div>
 												<div className="text">
 													<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s</p>
@@ -351,10 +357,10 @@ const Home = () => {
 										<li>
 											<div className="inner">
 												<div className="icon">
-													<img className="svg" src="img/svg/layers.svg" alt="" />
+													<i class="fa fa-code fa-3x"></i>
 												</div>
 												<div className="title_service">
-													<h3>Service</h3>
+													<h3>Web/Mobile Hybrid</h3>
 												</div>
 												<div className="text">
 													<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s</p>
@@ -366,10 +372,10 @@ const Home = () => {
 										<li>
 											<div className="inner">
 												<div className="icon">
-													<img className="svg" src="img/svg/share.svg" alt="" />
+													<i class="fa fa-chrome fa-3x"></i>
 												</div>
 												<div className="title_service">
-													<h3>Service</h3>
+													<h3>Websites</h3>
 												</div>
 												<div className="text">
 													<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s</p>
@@ -379,10 +385,10 @@ const Home = () => {
 										<li>
 											<div className="inner">
 												<div className="icon">
-													<img className="svg" src="img/svg/adobe-illustrator.svg" alt="" />
+													<i class="fa fa-comments fa-3x"></i>
 												</div>
 												<div className="title_service">
-													<h3>Service</h3>
+													<h3>Consultation</h3>
 												</div>
 												<div className="text">
 													<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s</p>

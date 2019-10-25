@@ -567,7 +567,7 @@ button span {
 
 .arlo_tm_hero_header_wrap .inner_content {
 	position: absolute;
-	top: 55%;
+	top: 50%;
 	left: 50%;
 	transform: translate(-50%, -50%);
 	z-index: 2;
@@ -1438,6 +1438,7 @@ button span {
 }
 
 .arlo_tm_services_wrap .list_wrap ul li .inner {
+	text-align: center;
 	width: 100%;
 	height: auto;
 	clear: both;
@@ -1465,6 +1466,11 @@ button span {
 
 .arlo_tm_services_wrap .list_wrap ul li .icon {
 	margin-bottom: 21px;
+	min-height: 70px;
+    display: flex;
+	justify-content: center;
+	color: rgb(227, 135, 45);
+    align-items: center;
 }
 
 .arlo_tm_services_wrap .list_wrap ul li .icon .svg {
