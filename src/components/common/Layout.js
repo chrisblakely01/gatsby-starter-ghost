@@ -1,5 +1,5 @@
 /* eslint-disable react/no-unescaped-entities */
-import React, { Fragment } from 'react'
+import React, { Fragment, useState, useEffect } from 'react'
 import PropTypes from 'prop-types'
 import Helmet from 'react-helmet'
 import { StaticQuery, graphql } from 'gatsby'
@@ -18,9 +18,31 @@ import '../../styles/style.css'
 *
 */
 const DefaultLayout = ({ data, children, bodyClass }) => {
+
+	const [isLoading, setIsLoading] = useState(true);
+	const [isMenuOpen, setIsMenuOpen] = useState(false);
+
 	const site = data.allGhostSettings.edges[0].node
 	// const twitterUrl = site.twitter ? `https://twitter.com/${site.twitter.replace(/^@/, ``)}` : null
 	// const facebookUrl = site.facebook ? `https://www.facebook.com/${site.facebook.replace(/^\//, ``)}` : null
+
+	useEffect(() => {
+		const timer = setTimeout(() => {
+			setIsLoading(false);
+		}, 1500);
+		return () => clearTimeout(timer);
+	}, []);
+
+	const MenuList = () =>
+		<ul className="anchor_nav">
+			<li><a href="/">Home</a></li>
+			<li><a href="/#about">About</a></li>
+			<li><a href="/#services">Services</a></li>
+			<li><a href="/#portfolio">Portfolio</a></li>
+			<li><a href="/#testimonials">Testimonials</a></li>
+			<li><a href="/#news">Writing</a></li>
+			<li><a href="/#contact">Contact</a></li>
+		</ul>
 
 	return (
 		<Fragment>
@@ -42,20 +64,23 @@ const DefaultLayout = ({ data, children, bodyClass }) => {
 				</div>
 
 				{/* <!-- PRELOADER --> */}
-				<div className="arlo_tm_preloader loaded">
+				{isLoading && <div className="arlo_tm_preloader">
 					<div className="spinner_wrap">
 						<div className="spinner"></div>
 					</div>
-				</div>
+				</div>}
 				{/* <!-- /PRELOADER --> */}
 
 				{/* <!-- MOBILE MENU --> */}
 				<div className="arlo_tm_mobile_header_wrap">
 					<div className="main_wrap">
-						<div className="logo">
-							<img src="img/logo/mobile_logo.png" alt="" />
-						</div>
-						<div className="arlo_tm_trigger">
+						<a href="/">
+							<div className="logo_wrap_mob">
+								Chris<span style={{ color: '#E3872D' }}>Blakely</span>.dev
+								{/* <a href="#"><img src={desktopLogo} alt="" /></a> */}
+							</div>
+						</a>
+						<div className="arlo_tm_trigger" onClick={() => setIsMenuOpen(!isMenuOpen)}>
 							<div className="hamburger hamburger--collapse-r">
 								<div className="hamburger-box">
 									<div className="hamburger-inner"></div>
@@ -63,16 +88,9 @@ const DefaultLayout = ({ data, children, bodyClass }) => {
 							</div>
 						</div>
 					</div>
-					<div className="arlo_tm_mobile_menu_wrap">
+					<div className={`arlo_tm_mobile_menu_wrap ${isMenuOpen ? 'menu-open' : ' '}`}>
 						<div className="mob_menu">
-							<ul className="anchor_nav">
-								<li><a href="#home">Home</a></li>
-								<li><a href="#about">About</a></li>
-								<li><a href="#services">Services</a></li>
-								<li><a href="#portfolio">Portfolio</a></li>
-								<li><a href="#news">News</a></li>
-								<li><a href="#contact">Contact</a></li>
-							</ul>
+							<MenuList />
 						</div>
 					</div>
 				</div>
@@ -91,15 +109,7 @@ const DefaultLayout = ({ data, children, bodyClass }) => {
 								</div>
 							</a>
 							<div className="menu_list_wrap">
-								<ul className="anchor_nav">
-									<li><a href="/">Home</a></li>
-									<li><a href="/#about">About</a></li>
-									<li><a href="/#services">Services</a></li>
-									<li><a href="/#portfolio">Portfolio</a></li>
-									<li><a href="/#news">Writing</a></li>
-									{/* <li><a href="/blog">Blog</a></li> */}
-									<li><a href="/#contact">Contact</a></li>
-								</ul>
+								<MenuList />
 							</div>
 							<div className="leftpart_bottom">
 								<div className="social_wrap">

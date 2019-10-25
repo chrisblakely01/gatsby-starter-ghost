@@ -47,8 +47,13 @@ const Home = () => {
 										<h3>Chris <span>Blakely</span></h3>
 									</div>
 									<div className="text_typing">
-										{/* <p> I'm a <span style={{ color: '#E3872D' }}>software developer</span> who helps startups and SME's build their apps, products and services</p> */}
-										<p> Lorem Ipsum is simply dummy text of the printing and typesetting industry. </p>
+										<p> I'm a freelance <span style={{ color: '#E3872D' }}>Web & App developer</span> who helps startups and SMEs build their products and services</p>
+										{/* <p> Lorem Ipsum is simply dummy text of the printing and typesetting industry. </p> */}
+									</div>
+									<div className="hero-contact-button-wrapper">
+										<a href="/#contact">
+											<button><span>Work with me</span></button>
+										</a>
 									</div>
 								</div>
 							</div>
@@ -155,10 +160,28 @@ const Home = () => {
 									<div className="arlo_tm_mini_title_holder">
 										{/* <h4>Some About my Abilities</h4> */}
 									</div>
-									<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. </p>
-									{/* <p>Over the past 5 years I have built cloud software that has enabled startups and small businesses to go from the MVP stage to having paying customers.
-									I know the importance of speed and cost when it comes to early stage business. WORKING TO BUDGETS {QUALITY}. Here's my toolset - if you don't know what any of these are, don't worry - These are simply the latest in software development technologies. Anyway enough about me,
-									check out my services and previous work below, or get in touch.</p> */}
+									{/* <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. </p> */}
+									<p>
+										Over the past 5 years I have built web and mobile applications that has enabled startups and SMEs to go from the idea stage to having paying customers.
+									</p>
+									<p>
+										Anyway enough about me,
+										check out my services and previous work below, or get in touch and let's work together!
+									</p>
+
+									<div className="arlo_tm_about_wrap">
+										<div className="buttons_wrap">
+											<ul>
+												<li>
+													<a href="index.html"><span>Download CV</span></a>
+												</li>
+												<li className="anchor">
+													<a href="#contact"><span>Contact</span></a>
+												</li>
+											</ul>
+										</div>
+									</div>
+
 								</div>
 								<div className="rightbox">
 									<div className="progress_bar_wrap_total">
@@ -180,6 +203,7 @@ const Home = () => {
 												<div className="arlo_tm_bar_bg"><div className="arlo_tm_bar_wrap open"><div className="arlo_tm_bar" style={{ width: '60%' }}></div></div></div>
 											</div>
 										</div> */}
+										<p>Here's my toolset - if you don't know what any of these are, don't worry - These are simply the latest in web and app development technologies. </p>
 
 										<ul className="chip-list">
 											<li className="chip">
@@ -282,18 +306,6 @@ const Home = () => {
 									</div>
 								</div>
 							</div>
-							{/* <div className="arlo_tm_about_wrap">
-								<div className="buttons_wrap">
-									<ul>
-										<li>
-											<a href="index.html"><span>Download CV</span></a>
-										</li>
-										<li className="anchor">
-											<a href="#contact"><span>Send Message</span></a>
-										</li>
-									</ul>
-								</div>
-							</div> */}
 						</div>
 					</div>
 				</div>
@@ -397,6 +409,40 @@ const Home = () => {
 						</div>
 					</div>
 				</div>
+				<div className="arlo_tm_section" id="services">
+					<div className="arlo_tm_skills_wrap">
+						<div className="container">
+							<div className="arlo_tm_title_holder">
+								<h3>Why am I different?</h3>
+								<span>Why we should work together to create your apps and services</span>
+							</div>
+							<div className="work_with_me_list_wrap row">
+								&nbsp;
+							</div>
+							<div>
+								<ul class="fa-ul">
+									<Fade bottom>
+
+										<li><span class="icon-li"><i class="fa fa-check-square fa-2x"></i></span>
+											I'm not just another developer. I'll work with you to understand your business goals and needs
+											</li>
+										<li><span class="icon-li"><i class="fa fa-check-square fa-2x"></i></span>
+											Speed and Cost is important. Using the latest technologies I will get your apps and services into the hands of end users faster
+											</li>
+										<li><span class="icon-li"><i class="fa fa-check-square fa-2x"></i></span>
+											Web and app development can be confusing. I'll explain everything in simple terms so you understand exactly what's happening. No unneeded technical jargon here!
+											</li>
+										<li><span class="icon-li"><i class="fa fa-check-square fa-2x"></i></span>
+											We'll be in constant communication. I will provide regular demo's and progress reports to give you peace of mind that thing's are going in the right direction
+											</li>
+
+									</Fade>
+								</ul>
+							</div>
+						</div>
+					</div>
+				</div>
+
 				{/* <!-- /SERVICES --> */}
 
 				{/* <!-- PORTFOLIO --> */}
@@ -412,18 +458,19 @@ const Home = () => {
 										<span>Check out my latest work</span>
 									</div>
 									<div className="arlo_tm_portfolio_titles"></div>
-									<div className="main-work-grid-container" style={{ marginBottom: '70px' }}>
+									<div className="main-work-grid-container">
 										<div className="work-item">
 											<Link to="/works/giggrafter-scheduler">
 												<img src={GGFeature} alt="Giggrafter" />
-												<div className="main-work-link">
-													Click for more info <i class="fa fa-arrow-right"></i>
-												</div>
+
 											</Link>
 										</div>
-										{/* <div className="portfolio-grid-item-top-2">
-											<img src={EatStreetFeature} alt="" />
-										</div> */}
+									</div>
+									<div className="main-work-link" >
+										<Link to="/works/giggrafter-scheduler">
+											<button><span style={{ marginRight: '10px' }}>View details</span><i class="fa fa-arrow-right"></i></button>
+										</Link>
+
 									</div>
 									<div className="arlo_tm_title_holder portfolio">
 										<h3>Other Work</h3>
@@ -477,23 +524,17 @@ const Home = () => {
 																	<i className="xcon-quote-left"></i>
 																</div>
 																<div className="definitions_wrap">
-																	<p>“The team are easy to work with and helped me make amazing websites in a short amount of time. Thanks guys for works.”</p>
+																	<p>“Chris was key in creating the GigGrafter product. He showed sound technical knowledge to design product features key to the business, as well as writing high-quality robust code across the entire technology stack.</p>
+																	<p> Besides being a strong developer, Chris understood our business goals and needs, suggesting changes to features to reduce development time, without compromising on quality or user experience.”</p>
 																</div>
 																<div className="name_holder">
-																	<p>Antonio Baraley, CEO Founder</p>
+																	<p>Barry Lynch, Co-founder, GigGrafter</p>
 																</div>
-															</div>
-														</li>
-														<li className="item">
-															<div className="inner">
-																<div className="quotebox_wrap">
-																	<i className="xcon-quote-left"></i>
-																</div>
-																<div className="definitions_wrap">
-																	<p>“We were looking for a logo with a touch of modernism. The teama grasped our needs and produced a stunning design.”</p>
-																</div>
-																<div className="name_holder">
-																	<p>Calena Gomez, AOC Designer</p>
+
+																<div>
+																	<Link to="/works/giggrafter-scheduler">
+																		<button><span>View GigGrafter Work</span></button>
+																	</Link>
 																</div>
 															</div>
 														</li>
@@ -648,7 +689,8 @@ const Home = () => {
 											</div>
 										</li>
 
-									</Fade></ul>
+									</Fade>
+								</ul>
 							</div>
 						</div>
 					</div>
