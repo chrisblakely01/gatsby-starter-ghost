@@ -2,10 +2,13 @@ import React, { useEffect } from 'react'
 
 import { MetaData } from '../../components/common/meta';
 import { Layout } from '../../components/common';
-import IntroImage1 from '../../img/blog/1.jpg';
-import IntroImage2 from '../../img/blog/1.jpg';
-import FeatureImage1 from '../../img/blog/1.jpg';
-import FeatureImage2 from '../../img/blog/1.jpg';
+import IntroImage1 from '../../img/gg-logo-short.png';
+import IntroImage2 from '../../img/showcase-image-1.png';
+import IntroImage3 from '../../img/gg1.png';
+import FeatureImage1 from '../../img/gg2.png';
+import FeatureImage2 from '../../img/gg-mobile.png';
+
+import GGLogo from '../../img/gg-logo-2.png';
 
 const GiggrafterScheduler = () =>
     <>
@@ -17,8 +20,12 @@ const GiggrafterScheduler = () =>
                     </div>
                     <div class="details_wrap">
                         <div class="leftbox">
-                            <img src={IntroImage1} alt="Giggrafter scheduler logo" style={{ marginBottom: '10px' }} />
-                            <img src={IntroImage2} alt="" />
+                            <div style={{ backgroundColor: '#343e48', marginBottom: '20px' }}>
+                                <img src={GGLogo} alt="Giggrafter scheduler logo" style={{ padding: '10px', }} />
+                            </div>
+                            <img className="image" src={IntroImage2} alt="" style={{ marginBottom: '20px' }}/>
+                            <img className="image" src={IntroImage3} alt="" />
+
                         </div>
                         <div class="rightbox">
                             <div class="name_holder">
@@ -54,11 +61,6 @@ const GiggrafterScheduler = () =>
                                 The main challenge I faced was balancing speed, code quality and business impact when designing and implementing product features.
                                 Key accomplishments include rearchitecting and rebuilding the rota view within the web application in 5 weeks. This provided performance improvements and better UI interactions,
                                 allowing for a better user experience. As well as this, I created a responsive mobile view in 3 weeks, allowing users to view their rota from mobile devices.
-                            </p>
-
-
-                            <p>
-                                My efforts for Giggrafter resulted in the company onboarding over 50 users, and over 10,000 shifts being scheduled at time of writing.
                             </p>
                         </div>
                     </div>

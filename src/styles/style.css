@@ -67,6 +67,15 @@ img.svg {
 	/* Opera/IE 8+ */
 }
 
+.orange-text {
+	color: #E3872D
+}
+
+.orange-text-bold {
+	color: #E3872D;
+	font-weight: bold;
+}
+
 #ripple {
 	position: relative;
 	z-index: 0;
@@ -174,7 +183,7 @@ button {
 	overflow: hidden;
 }
 
-button:before{
+button:before {
 	position: absolute;
 	content: "";
 	color: #fff;
@@ -188,14 +197,14 @@ button:before{
 	z-index: 1;
 }
 
-button:hover:before{
+button:hover:before {
 	color: #fff;
 	width: 180%;
 }
 
 button span {
-    position: relative;
-    z-index: 2;
+	position: relative;
+	z-index: 2;
 }
 
 /*---------------------------------------------------*/
@@ -247,8 +256,8 @@ button span {
 }
 
 .logo_wrap_mob {
-    font-size: 20px;
-    color: white;
+	font-size: 20px;
+	color: white;
 }
 
 .arlo_tm_leftpart_wrap .menu_list_wrap {
@@ -743,6 +752,12 @@ button span {
 	/* Firefox, other Gecko */
 	box-sizing: border-box;
 	/* Opera/IE 8+ */
+}
+
+@media (max-width: 1040px) {
+	.arlo_tm_title_holder {
+		margin-top: 100px;
+	}
 }
 
 .arlo_tm_title_holder.contact {
@@ -1439,6 +1454,7 @@ button span {
 
 .arlo_tm_services_wrap .list_wrap ul li .inner {
 	text-align: center;
+	min-height: 346px;
 	width: 100%;
 	height: auto;
 	clear: both;
@@ -1467,10 +1483,10 @@ button span {
 .arlo_tm_services_wrap .list_wrap ul li .icon {
 	margin-bottom: 21px;
 	min-height: 70px;
-    display: flex;
+	display: flex;
 	justify-content: center;
 	color: rgb(227, 135, 45);
-    align-items: center;
+	align-items: center;
 }
 
 .arlo_tm_services_wrap .list_wrap ul li .icon .svg {
@@ -1492,11 +1508,16 @@ button span {
 }
 
 .icon-li {
+	color: #E3872D;
 	position: absolute;
 	left: -2.5em;
 	width: 2.14285714em;
 	/* top: .14285714em; */
 	text-align: center;
+}
+
+.fa-ul>li p {
+	padding-top: 2px;
 }
 
 .fa-ul>li {
@@ -1626,7 +1647,7 @@ button span {
 }
 
 @media (max-width: 1040px) {
-	.main-work-link button{
+	.main-work-link button {
 		width: 100%;
 	}
 }
@@ -3276,6 +3297,12 @@ button span {
 		padding-right: 0px;
 		width: 100%;
 		margin-bottom: 50px;
+		text-align: center;
+	}
+	.arlo_tm_portfolio_single_wrap .details_wrap .leftbox .image {
+		width: 45%;
+		margin-top: 10px;
+		margin-bottom: 10px;
 	}
 	.arlo_tm_portfolio_single_wrap .details_wrap .rightbox {
 		width: 100%;
@@ -3302,6 +3329,11 @@ button span {
 @media (max-width: 768px) {
 	.arlo_tm_hero_header_wrap .name_holder h3 {
 		font-size: 40px;
+	}
+	.arlo_tm_portfolio_single_wrap .details_wrap .leftbox .image {
+		width: 100%;
+		/* width: 45%;
+		margin: 10%; */
 	}
 	.arlo_tm_hero_header_wrap .text_typing p {
 		font-size: 21px;

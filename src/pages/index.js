@@ -5,7 +5,9 @@ import meImage from '../img/me.jpg'
 
 import { Layout } from '../components/common'
 import { Link } from 'gatsby';
-import 'font-awesome/css/font-awesome.min.css';
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faHome, faMobileAlt, faCode, faTools, faComments, faCheckSquare } from "@fortawesome/free-solid-svg-icons";
+import { faChrome } from "@fortawesome/free-brands-svg-icons";
 import Fade from 'react-reveal/Fade';
 
 import GGFeature from '../img/gg-logo-2.png';
@@ -19,11 +21,6 @@ import BelfastCityAirportFeature from '../img/belfast-city-airport-logo.png';
 
 /**
 * Main index page (home page)
-*
-* Loads all posts from Ghost and uses pagination to navigate through them.
-* The number of posts that should appear per page can be setup
-* in /utils/siteConfig.js under `postsPerPage`.
-*
 */
 const Home = () => {
 	return (
@@ -47,7 +44,7 @@ const Home = () => {
 										<h3>Chris <span>Blakely</span></h3>
 									</div>
 									<div className="text_typing">
-										<p> I'm a freelance <span style={{ color: '#E3872D' }}>Web & App developer</span> who helps startups and SMEs build their products and services</p>
+										<p> I'm a freelance <span className="orange-text">Web & App developer</span> who helps startups and SMEs build their products and services</p>
 										{/* <p> Lorem Ipsum is simply dummy text of the printing and typesetting industry. </p> */}
 									</div>
 									<div className="hero-contact-button-wrapper">
@@ -64,88 +61,6 @@ const Home = () => {
 						</div>
 					</div>
 				</div>
-
-				{/* <!-- ABOUT --> */}
-				{/* <div className="arlo_tm_section relative" id="about">
-					<div className="arlo_tm_about_wrapper_all">
-						<div className="container">
-							<div className="arlo_tm_title_holder">
-								<h3>About Me</h3>
-								<span>Main informations about me</span>
-							</div>
-							<div className="arlo_tm_about_wrap">
-								<div className="author_wrap">
-									<div className="leftbox">
-										<div className="about_image_wrap parallax" data-relative-input="true">
-											<div className="image layer" data-depth="0.1">
-												<img src="img/about/550x640.jpg" alt="" />
-												<div className="inner" data-img-url="img/about/1.jpg"></div>
-											</div>
-											<div className="border layer" data-depth="0.2">
-												<img src="img/about/550x640.jpg" alt="" />
-												<div className="inner"></div>
-											</div>
-										</div>
-
-									</div>
-									<div className="rightbox">
-										<div className="arlo_tm_mini_title_holder">
-											<h4>I'm Alan Michaelis and <span className="arlo_tm_animation_text_word"></span></h4>
-										</div>
-										<div className="definition">
-											<p>Hi! My name is <strong>Alan Michaelis</strong>. I am a Web Developer, and I'm very passionate and dedicated to my work. With 20 years experience as a professional Web developer, I have acquired the skills and knowledge necessary to make your project a success. I enjoy every step of the design process, from discussion and collaboration to concept and execution, but I find the most satisfaction in seeing the finished product do everything for you that it was created to do.</p>
-										</div>
-										<div className="about_short_contact_wrap">
-											<ul>
-												<li>
-													<span><label>Birthday:</label> 01.07.1990</span>
-												</li>
-												<li>
-													<span><label>Age:</label> 28</span>
-												</li>
-												<li>
-													<span><label>City:</label> New York, USA</span>
-												</li>
-												<li>
-													<span><label>Interests:</label> Soccer, UFC</span>
-												</li>
-												<li>
-													<span><label>Study:</label> Chicago University</span>
-												</li>
-												<li>
-													<span><label>Degree:</label> Master</span>
-												</li>
-												<li>
-													<span><label>Website:</label> <a href="#">www.mywebsite.com</a></span>
-												</li>
-												<li>
-													<span><label>Mail:</label> <a href="mailto:example@gmail.com">mymail&#64;gmail.com</a></span>
-												</li>
-												<li>
-													<span><label>Phone:</label> <a href="#">+77 022 177 05 05</a></span>
-												</li>
-												<li>
-													<span><label>Twitter:</label> <a href="#">&#64;myusername</a></span>
-												</li>
-											</ul>
-										</div>
-										<div className="buttons_wrap">
-											<ul>
-												<li>
-													<a href="index.html"><span>Download CV</span></a>
-												</li>
-												<li className="anchor">
-													<a href="#contact"><span>Send Message</span></a>
-												</li>
-											</ul>
-										</div>
-									</div>
-								</div>
-							</div>
-						</div>
-					</div>
-				</div> */}
-				{/* <!-- /ABOUT --> */}
 
 				{/* <!-- ABOUT/SKILLS --> */}
 				<div className="arlo_tm_section" id="about">
@@ -165,6 +80,9 @@ const Home = () => {
 										Over the past 5 years I have built web and mobile applications that has enabled startups and SMEs to go from the idea stage to having paying customers.
 									</p>
 									<p>
+										I know that cost and speed are critical when trying to start a business or launch a product. My approach to development ensures your products and services spend <span className="orange-text-bold">less time in development</span> and <span className="orange-text-bold">more time in the hands of your users</span>.
+									</p>
+									<p>
 										Anyway enough about me,
 										check out my services and previous work below, or get in touch and let's work together!
 									</p>
@@ -173,7 +91,7 @@ const Home = () => {
 										<div className="buttons_wrap">
 											<ul>
 												<li>
-													<a href="index.html"><span>Download CV</span></a>
+													<a href="#contact"><span>Request CV</span></a>
 												</li>
 												<li className="anchor">
 													<a href="#contact"><span>Contact</span></a>
@@ -185,24 +103,6 @@ const Home = () => {
 								</div>
 								<div className="rightbox">
 									<div className="progress_bar_wrap_total">
-										{/* <div className="arlo_tm_progress_wrap" data-size="small" data-round="c" data-strip="off">
-											<div className="arlo_tm_progress" data-value="95" data-color="#000">
-												<span><span className="label">Software Development - <span className="experience">5 years of experience</span></span><span className="number">95%</span></span>
-												<div className="arlo_tm_bar_bg"><div className="arlo_tm_bar_wrap open"><div className="arlo_tm_bar" style={{ width: '95%' }}></div></div></div>
-											</div>
-											<div className="arlo_tm_progress" data-value="85" data-color="#000">
-												<span><span className="label">Frontend Development - <span className="experience">3 years of experience</span></span><span className="number">70%</span></span>
-												<div className="arlo_tm_bar_bg"><div className="arlo_tm_bar_wrap open"><div className="arlo_tm_bar" style={{ width: '70%' }}></div></div></div>
-											</div>
-											<div className="arlo_tm_progress" data-value="75" data-color="#000">
-												<span><span className="label">Backend Development - <span className="experience">4 years of experience</span></span><span className="number">80%</span></span>
-												<div className="arlo_tm_bar_bg"><div className="arlo_tm_bar_wrap open"><div className="arlo_tm_bar" style={{ width: '80%' }}></div></div></div>
-											</div>
-											<div className="arlo_tm_progress" data-value="90" data-color="#000">
-												<span><span className="label">App Development - <span className="experience">2 years of experience</span></span><span className="number">60%</span></span>
-												<div className="arlo_tm_bar_bg"><div className="arlo_tm_bar_wrap open"><div className="arlo_tm_bar" style={{ width: '60%' }}></div></div></div>
-											</div>
-										</div> */}
 										<p>Here's my toolset - if you don't know what any of these are, don't worry - These are simply the latest in web and app development technologies. </p>
 
 										<ul className="chip-list">
@@ -331,39 +231,39 @@ const Home = () => {
 										<li>
 											<div className="inner">
 												<div className="icon">
-													<i class="fa fa-cloud fa-3x"></i>
+													<FontAwesomeIcon icon={faHome} size="3x" />
 												</div>
 												<div className="title_service">
 													<h3>Web Development</h3>
 												</div>
 												<div className="text">
-													<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s</p>
+													<p>Whether it's frontend or backend development, I'm here to help with your web development needs</p>
 												</div>
 											</div>
 										</li>
 										<li>
 											<div className="inner">
 												<div className="icon">
-													<i class="fa fa-mobile fa-5x"></i>
+													<FontAwesomeIcon icon={faMobileAlt} size="3x" />
 												</div>
 												<div className="title_service">
 													<h3>App Development</h3>
 												</div>
 												<div className="text">
-													<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s</p>
+													<p>Everyone you meet will have a smartphone. I can help give your business a mobile presence with beautiful apps </p>
 												</div>
 											</div>
 										</li>
 										<li>
 											<div className="inner">
 												<div className="icon">
-													<i class="fa fa-code fa-3x"></i>
+													<FontAwesomeIcon icon={faCode} size="3x" />
 												</div>
 												<div className="title_service">
 													<h3>Web/Mobile Hybrid</h3>
 												</div>
 												<div className="text">
-													<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s</p>
+													<p>Need a web application and mobile app capabilities, but don't have the budget for both? Using the latest technologies, I can help </p>
 												</div>
 											</div>
 										</li>
@@ -372,39 +272,39 @@ const Home = () => {
 										<li>
 											<div className="inner">
 												<div className="icon">
-													<i class="fa fa-chrome fa-3x"></i>
+													<FontAwesomeIcon icon={faTools} size="3x" />
 												</div>
 												<div className="title_service">
-													<h3>Websites</h3>
+													<h3>MVP's & Prototypes</h3>
 												</div>
 												<div className="text">
-													<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s</p>
+													<p>I can help bringing your idea to life with a minimal viable product (MVP) you can show users and investors</p>
 												</div>
 											</div>
 										</li>
 										<li>
 											<div className="inner">
 												<div className="icon">
-													<i class="fa fa-comments fa-3x"></i>
+													<FontAwesomeIcon icon={faCode} size="3x" />
+												</div>
+												<div className="title_service">
+													<h3>Responsive Websites</h3>
+												</div>
+												<div className="text">
+													<p>Did you know that 57% of web traffic is from a mobile device? I can make sure your website gives mobile users the best experience</p>
+												</div>
+											</div>
+										</li>
+										<li>
+											<div className="inner">
+												<div className="icon">
+													<FontAwesomeIcon icon={faComments} size="3x" />
 												</div>
 												<div className="title_service">
 													<h3>Consultation</h3>
 												</div>
 												<div className="text">
-													<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s</p>
-												</div>
-											</div>
-										</li>
-										<li>
-											<div className="inner">
-												<div className="icon">
-													<img className="svg" src="img/svg/adobe-illustrator.svg" alt="" />
-												</div>
-												<div className="title_service">
-													<h3>Service</h3>
-												</div>
-												<div className="text">
-													<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s</p>
+													<p>Have an idea and don't know where to start? Need resassurance about your current codebase? Get in touch for a no strings attached consultation</p>
 												</div>
 											</div>
 										</li>
@@ -419,32 +319,44 @@ const Home = () => {
 					<div className="arlo_tm_skills_wrap">
 						<div className="container">
 							<div className="arlo_tm_title_holder">
-								<h3>Why am I different?</h3>
+								<h3>Why work with me?</h3>
 								<span>Why we should work together to create your apps and services</span>
 							</div>
 							<div className="work_with_me_list_wrap row">
 								&nbsp;
 							</div>
-							<div>
-								<ul class="fa-ul">
-									<Fade bottom>
+							<Fade bottom>
+								<div>
+									<ul class="fa-ul">
 
-										<li><span class="icon-li"><i class="fa fa-check-square fa-2x"></i></span>
-											I'm not just another developer. I'll work with you to understand your business goals and needs
-											</li>
-										<li><span class="icon-li"><i class="fa fa-check-square fa-2x"></i></span>
-											Speed and Cost is important. Using the latest technologies I will get your apps and services into the hands of end users faster
-											</li>
-										<li><span class="icon-li"><i class="fa fa-check-square fa-2x"></i></span>
-											Web and app development can be confusing. I'll explain everything in simple terms so you understand exactly what's happening. No unneeded technical jargon here!
-											</li>
-										<li><span class="icon-li"><i class="fa fa-check-square fa-2x"></i></span>
-											We'll be in constant communication. I will provide regular demo's and progress reports to give you peace of mind that thing's are going in the right direction
-											</li>
+										<li>
+											<span class="icon-li"><FontAwesomeIcon icon={faCheckSquare} size="2x" /></span>
+											<p>I'm not just another developer - I have a business mindset and will work with you to really understand your business goals and needs</p>
+										</li>
+										<li>
+											<span class="icon-li"><FontAwesomeIcon icon={faCheckSquare} size="2x" /></span>
+											<p>Proven experience in getting web and mobile apps from idea stage to product launch</p>
+										</li>
+										<li><span class="icon-li"><FontAwesomeIcon icon={faCheckSquare} size="2x" /></span>
+											<p>
+												Web and app development doesn't have to be confusing. I'll explain everything in simple terms so you understand exactly what's happening. No unneeded technical jargon here!
+											</p>
+										</li>
+										<li><span class="icon-li"><FontAwesomeIcon icon={faCheckSquare} size="2x" /></span>
+											<p>
+												We'll be in constant communication. I will provide regular demo's and progress reports to give you peace of mind that thing's are going in the right direction
+											</p>
+										</li>
+										<li>
+											<span class="icon-li"><FontAwesomeIcon icon={faCheckSquare} size="2x" /></span>
+											<p>
+												Competitive rates and payment options that suits you
+											</p>
+										</li>
 
-									</Fade>
-								</ul>
-							</div>
+									</ul>
+								</div>
+							</Fade>
 						</div>
 					</div>
 				</div>

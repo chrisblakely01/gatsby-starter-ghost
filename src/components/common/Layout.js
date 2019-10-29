@@ -35,13 +35,13 @@ const DefaultLayout = ({ data, children, bodyClass }) => {
 
 	const MenuList = () =>
 		<ul className="anchor_nav">
-			<li><a href="/">Home</a></li>
-			<li><a href="/#about">About</a></li>
-			<li><a href="/#services">Services</a></li>
-			<li><a href="/#portfolio">Portfolio</a></li>
-			<li><a href="/#testimonials">Testimonials</a></li>
-			<li><a href="/#news">Writing</a></li>
-			<li><a href="/#contact">Contact</a></li>
+			<li><a href="/" onClick={() => setIsMenuOpen(!isMenuOpen)}>Home</a></li>
+			<li><a href="/#about" onClick={() => setIsMenuOpen(!isMenuOpen)}>About</a></li>
+			<li><a href="/#services" onClick={() => setIsMenuOpen(!isMenuOpen)}>Services</a></li>
+			<li><a href="/#portfolio" onClick={() => setIsMenuOpen(!isMenuOpen)}>Portfolio</a></li>
+			<li><a href="/#testimonials" onClick={() => setIsMenuOpen(!isMenuOpen)}>Testimonials</a></li>
+			<li><a href="/#news" onClick={() => setIsMenuOpen(!isMenuOpen)}>Writing</a></li>
+			<li><a href="/#contact" onClick={() => setIsMenuOpen(!isMenuOpen)}>Contact</a></li>
 		</ul>
 
 	return (
