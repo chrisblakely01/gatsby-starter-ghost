@@ -626,35 +626,42 @@ const Home = () => {
 					<div className="arlo_tm_footer_contact_wrapper_all">
 						<div className="arlo_tm_contact_wrap_all">
 							<div className="container">
+								<p style={{ marginBottom: '50px', textAlign: 'center' }}>
+									If you want to work together, have any questions, or would like to know more about how I can help your business, feel free to get in touch and I'll get straight back to you.
+								</p>
+								<p></p>
 								<div className="leftbox">
 									<div className="arlo_tm_mini_title_holder contact">
 										<h4>Get in Touch</h4>
 									</div>
 									<div className="short_info_wrap">
 										<ul>
-											<li><p><label>Address:</label><span>123 Qwerty Avenue NYC, USA</span></p></li>
+											<li><p><label>Business Hours:</label><span>9:00am - 5:00pm (Monday - Friday) </span></p></li>
 											<li><p><label>Email:</label><span><a href="mailto:hi@chrisblakely.dev">hi@chrisblakely.dev</a></span></p></li>
-											<li><p><label>Phone:</label><span>+77 022 177 05 05</span></p></li>
+											<li><p><label>Phone:</label><span>+447305362095</span></p></li>
 										</ul>
 									</div>
 								</div>
 								<div className="rightbox">
 									<div className="arlo_tm_contact_wrap">
 										<div className="main_input_wrap">
-											<form action="/" method="post" className="contact_form" id="contact_form">
+											<form action="/" method="post" className="contact_form" id="contact_form" data-netlify="true">
 												<div className="returnmessage" data-success="Your message has been received, We will contact you soon."></div>
 												<div className="empty_notice"><span>Please Fill Required Fields</span></div>
 												<div className="wrap">
-													<input id="name" type="text" placeholder="Your Name" />
+													<input id="name" type="text" placeholder="Your Name*" required />
 												</div>
 												<div className="wrap">
-													<input id="email" type="text" placeholder="Your Email" />
+													<input id="email" type="text" placeholder="Your Email*" />
 												</div>
 												<div className="wrap">
-													<textarea id="message" placeholder="Your Message"></textarea>
+													<input id="phone" type="text" placeholder="Your Phone Number*" />
+												</div>
+												<div className="wrap">
+													<textarea id="message" placeholder="Your Message*"></textarea>
 												</div>
 												<div className="arlo_tm_button">
-													<a id="send_message" href="#"><span>Send Message</span></a>
+													<button type="submit"><span>Send Message</span></button>
 												</div>
 											</form>
 										</div>
