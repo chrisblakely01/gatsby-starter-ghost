@@ -645,9 +645,7 @@ const Home = () => {
 								<div className="rightbox">
 									<div className="arlo_tm_contact_wrap">
 										<div className="main_input_wrap">
-											<form action="/" method="post" className="contact_form" id="contact_form" data-netlify="true">
-												<div className="returnmessage" data-success="Your message has been received, We will contact you soon."></div>
-												<div className="empty_notice"><span>Please Fill Required Fields</span></div>
+											<form method="post" className="contact_form" id="contact_form" data-netlify="true">
 												<div className="wrap">
 													<input id="name" type="text" placeholder="Your Name*" required />
 												</div>
@@ -671,7 +669,7 @@ const Home = () => {
 						</div>
 						<div className="arlo_tm_footer_wrap">
 							<div className="container">
-								<p>&copy; Copyright 2019. All Rights are Reserved.</p>
+								<p>&copy; Copyright Blakely Web Development LTD 2019. All Rights are Reserved.</p>
 							</div>
 						</div>
 					</div>

@@ -330,9 +330,10 @@ button span {
 }
 
 .arlo_tm_leftpart_wrap .leftpart_bottom {
-	position: absolute;
-	left: 60px;
-	bottom: 38px;
+    position: absolute;
+    left: 110px;
+    bottom: 38px;
+    font-size: 20px;
 }
 
 .arlo_tm_leftpart_wrap .leftpart_bottom .social_wrap {

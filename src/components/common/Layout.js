@@ -114,11 +114,8 @@ const DefaultLayout = ({ data, children, bodyClass }) => {
 							<div className="leftpart_bottom">
 								<div className="social_wrap">
 									<ul>
-										<li><a href="#"><i className="xcon-facebook"></i></a></li>
-										<li><a href="#"><i className="xcon-twitter"></i></a></li>
-										<li><a href="#"><i className="xcon-linkedin"></i></a></li>
-										<li><a href="#"><i className="xcon-instagram"></i></a></li>
-										<li><a href="#"><i className="xcon-behance"></i></a></li>
+										<li><a href="https://twitter.com/chrisblakely01"><i className="xcon-twitter"></i></a></li>
+										<li><a href="https://www.linkedin.com/in/chrisblakely01/"><i className="xcon-linkedin"></i></a></li>
 									</ul>
 								</div>
 							</div>
