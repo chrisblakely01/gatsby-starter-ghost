@@ -1,9 +1,9 @@
-import React from 'react'
-import PropTypes from 'prop-types'
-import { graphql } from 'gatsby'
+import React from 'react';
+import PropTypes from 'prop-types';
+import { graphql } from 'gatsby';
 
-import { Layout, PostCard, Pagination } from '../components/common'
-import { MetaData } from '../components/common/meta'
+import { Layout, PostCard, Pagination } from '../components/common';
+import { MetaData } from '../components/common/meta';
 
 /**
 * Main blog page 
@@ -14,7 +14,7 @@ import { MetaData } from '../components/common/meta'
 *
 */
 const Blog = ({ data, location, pageContext }) => {
-	const posts = data.allGhostPost.edges
+	const posts = data.allGhostPost.edges;
 	return (
 		<>
 			<MetaData location={location} />
@@ -37,8 +37,8 @@ const Blog = ({ data, location, pageContext }) => {
 				</div>
 			</Layout>
 		</>
-	)
-}
+	);
+};
 
 Blog.propTypes = {
 	data: PropTypes.shape({
@@ -48,9 +48,9 @@ Blog.propTypes = {
 		pathname: PropTypes.string.isRequired,
 	}).isRequired,
 	pageContext: PropTypes.object,
-}
+};
 
-export default Blog
+export default Blog;
 
 // This page query loads all posts sorted descending by published date
 // The `limit` and `skip` values are used for pagination
@@ -68,4 +68,4 @@ export const pageQuery = graphql`
       }
     }
   }
-`
+`;

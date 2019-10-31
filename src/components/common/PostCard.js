@@ -1,12 +1,12 @@
-import React from 'react'
-import PropTypes from 'prop-types'
-import { Link } from 'gatsby'
-import { Tags } from '@tryghost/helpers-gatsby'
-import { readingTime as readingTimeHelper } from '@tryghost/helpers'
+import React from 'react';
+import PropTypes from 'prop-types';
+import { Link } from 'gatsby';
+import { Tags } from '@tryghost/helpers-gatsby';
+import { readingTime as readingTimeHelper } from '@tryghost/helpers';
 
 const PostCard = ({ post }) => {
-	const url = `/${post.slug}/`
-	const readingTime = readingTimeHelper(post)
+	const url = `/${post.slug}/`;
+	const readingTime = readingTimeHelper(post);
 
 	return (
 		<Link to={url} className="post-card">
@@ -47,8 +47,8 @@ const PostCard = ({ post }) => {
 				</div>
 			</footer> */}
 		</Link>
-	)
-}
+	);
+};
 
 PostCard.propTypes = {
 	post: PropTypes.shape({
@@ -68,6 +68,6 @@ PostCard.propTypes = {
 			profile_image: PropTypes.string,
 		}).isRequired,
 	}).isRequired,
-}
+};
 
-export default PostCard
+export default PostCard;
