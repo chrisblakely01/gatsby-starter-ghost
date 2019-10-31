@@ -18,7 +18,7 @@ const ContactForm = () => {
 		fetch(`/`, {
 			method: `POST`,
 			headers: { 'Content-Type': `application/x-www-form-urlencoded` },
-			body: encode({ "form-name": `cb-dev-contact`, name, email, phoneNumber, message }),
+			body: encode({ "form-name": `contact`, name, email, phoneNumber, message }),
 		})
 			.then((resp) => {
 				if (resp.ok) {
@@ -31,13 +31,7 @@ const ContactForm = () => {
 	};
 
 	return (
-		<form method="post" className="contact_form" id="contact_form"
-			name="contact"
-			data-netlify="true"
-			data-netlify-honeypot="bot-field"
-			onSubmit={handleSubmit}
-		>
-			<input type="hidden" name="form-name" value="contact" />
+		<form className="contact_form" onSubmit={handleSubmit}>
 			{showSuccess && <div className="returnmessage">Thanks for your message! I will be in contact soon.</div>}
 			{showError && <div className="returnmessage-error">Looks like something went wrong. Please again, if the error persists please contact me via phone or email. Sorry for any inconvenience!.</div>}
 			<div className="wrap">
