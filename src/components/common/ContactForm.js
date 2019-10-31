@@ -5,23 +5,28 @@ const ContactForm = () => {
 	const [email, setEmail] = useState();
 	const [phoneNumber, setPhoneNumber] = useState();
 	const [message, setMessage] = useState();
+	const [showSuccess, setShowSuccess] = useState(false);
+	const [showError, setShowError] = useState(false);
 
 	const handleSubmit = (e) => {
 		e.preventDefault();
 		const form = e.target;
+
+		const request = {
+			'form-name': form.getAttribute(`name`),
+			name,
+			email,
+			phoneNumber,
+			message,
+		};
+
 		fetch(`/`, {
 			method: `POST`,
 			headers: { 'Content-Type': `application/x-www-form-urlencoded` },
-			body: {
-				'form-name': form.getAttribute(`name`),
-				name,
-				email,
-				phoneNumber,
-				message,
-			},
+			body: JSON.stringify(request),
 		})
-			.then(console.log(`success`))
-			.catch(error => alert(error));
+			.then(setShowSuccess(true))
+			.catch(() => setShowError(true));
 	};
 
 	return (
@@ -32,6 +37,8 @@ const ContactForm = () => {
 			onSubmit={handleSubmit}
 		>
 			<input type="hidden" name="form-name" value="contact" />
+			{showSuccess && <div className="returnmessage">Thanks for your message! I will be in contact soon.</div>}
+			{showError && <div className="returnmessage-error">Looks like something went wrong. Please again, if the error persists please contact me via phone or email. Sorry for any inconvenience!.</div>}
 			<div className="wrap">
 				<input id="name" type="text" placeholder="Your Name*" required onChange={e => setName(e.target.value)} />
 			</div>

@@ -2697,9 +2697,25 @@ button span {
 }
 
 .arlo_tm_contact_wrap .returnmessage {
-	color: #0064FF;
-	margin-bottom: 7px;
+	background-color: #aaefff;
+	margin-bottom: 15px;
 	text-align: left;
+	padding: 5px;
+	border-radius: 10px;
+	font-weight: 600;
+	text-align: center;
+
+}
+
+.arlo_tm_contact_wrap .returnmessage-error {
+	background-color: #ffb3b3;
+	margin-bottom: 15px;
+	text-align: left;
+	padding: 5px;
+	border-radius: 10px;
+	font-weight: 600;
+	text-align: center;
+
 }
 
 .arlo_tm_footer_wrap {
