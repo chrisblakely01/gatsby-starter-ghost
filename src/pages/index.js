@@ -17,6 +17,7 @@ import ClickEnergyFeature from '../img/click-energy-logo.png';
 import FreeCodeCampLogo from '../img/freecodecamp-logo.jpg';
 import HackernoonLogo from '../img/hackernoon-logo.png';
 import BelfastCityAirportFeature from '../img/belfast-city-airport-logo.png';
+import ContactForm from '../components/common/ContactForm';
 
 
 /**
@@ -285,7 +286,7 @@ const Home = () => {
 										<li>
 											<div className="inner">
 												<div className="icon">
-													<FontAwesomeIcon icon={faCode} size="3x" />
+													<FontAwesomeIcon icon={faChrome} size="3x" />
 												</div>
 												<div className="title_service">
 													<h3>Responsive Websites</h3>
@@ -645,24 +646,7 @@ const Home = () => {
 								<div className="rightbox">
 									<div className="arlo_tm_contact_wrap">
 										<div className="main_input_wrap">
-											<form method="post" className="contact_form" id="contact_form" data-netlify="true">
-												<input type="hidden" name="form-name" value="contact" />
-												<div className="wrap">
-													<input id="name" type="text" placeholder="Your Name*" required />
-												</div>
-												<div className="wrap">
-													<input id="email" type="text" placeholder="Your Email*" />
-												</div>
-												<div className="wrap">
-													<input id="phone" type="text" placeholder="Your Phone Number*" />
-												</div>
-												<div className="wrap">
-													<textarea id="message" placeholder="Your Message*"></textarea>
-												</div>
-												<div className="arlo_tm_button">
-													<button type="submit"><span>Send Message</span></button>
-												</div>
-											</form>
+												<ContactForm/>
 										</div>
 									</div>
 								</div>
