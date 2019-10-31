@@ -646,6 +646,7 @@ const Home = () => {
 									<div className="arlo_tm_contact_wrap">
 										<div className="main_input_wrap">
 											<form method="post" className="contact_form" id="contact_form" data-netlify="true">
+												<input type="hidden" name="form-name" value="contact" />
 												<div className="wrap">
 													<input id="name" type="text" placeholder="Your Name*" required />
 												</div>
