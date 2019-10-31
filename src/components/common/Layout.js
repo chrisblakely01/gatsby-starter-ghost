@@ -3,6 +3,7 @@ import React, { Fragment, useState, useEffect } from 'react'
 import PropTypes from 'prop-types'
 import Helmet from 'react-helmet'
 import { StaticQuery, graphql } from 'gatsby'
+import CookieConsent from "react-cookie-consent";
 
 // Styles
 import '../../styles/app.css'
@@ -43,6 +44,8 @@ const DefaultLayout = ({ data, children, bodyClass }) => {
 			<li><a href="/#news" onClick={() => setIsMenuOpen(!isMenuOpen)}>Writing</a></li>
 			<li><a href="/#contact" onClick={() => setIsMenuOpen(!isMenuOpen)}>Contact</a></li>
 		</ul>
+
+	const CookieAcceptButton = () => <span>Accept Cookies</span>
 
 	return (
 		<Fragment>
@@ -135,6 +138,9 @@ const DefaultLayout = ({ data, children, bodyClass }) => {
 
 				</div>
 			</div>
+			<CookieConsent buttonText={<CookieAcceptButton />} buttonStyle={{ margin: '10px' }} disableButtonStyles>
+				This website uses cookies to enhance the user experience. By continuing to browse this site, you agree to the use of these cookies.
+			</CookieConsent>
 		</Fragment>
 	)
 }

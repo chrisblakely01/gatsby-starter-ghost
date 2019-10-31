@@ -627,7 +627,7 @@ const Home = () => {
 						<div className="arlo_tm_contact_wrap_all">
 							<div className="container">
 								<p style={{ marginBottom: '50px', textAlign: 'center' }}>
-									If you want to work together, have any questions, or would like to know more about how I can help your business, feel free to get in touch and I'll get straight back to you.
+									If you would like to work together, have any questions, or would like to know more about how I can help your business, feel free to get in touch and I'll get straight back to you.
 								</p>
 								<p></p>
 								<div className="leftbox">
