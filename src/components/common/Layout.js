@@ -4,6 +4,7 @@ import PropTypes from 'prop-types';
 import Helmet from 'react-helmet';
 import { StaticQuery, graphql } from 'gatsby';
 import CookieConsent from "react-cookie-consent";
+import { Link } from 'react-scroll';
 
 // Styles
 import '../../styles/app.css';
@@ -18,7 +19,7 @@ import '../../styles/style.css';
 * styles, and meta data for each page.
 *
 */
-const DefaultLayout = ({ data, children, bodyClass }) => {
+const DefaultLayout = ({ isHome, data, children, bodyClass }) => {
 	const [isLoading, setIsLoading] = useState(true);
 	const [isMenuOpen, setIsMenuOpen] = useState(false);
 
@@ -41,6 +42,16 @@ const DefaultLayout = ({ data, children, bodyClass }) => {
 		<li><a href="/#testimonials" onClick={() => setIsMenuOpen(!isMenuOpen)}>Testimonials</a></li>
 		<li><a href="/#news" onClick={() => setIsMenuOpen(!isMenuOpen)}>Writing</a></li>
 		<li><a href="/#contact" onClick={() => setIsMenuOpen(!isMenuOpen)}>Contact</a></li>
+	</ul>;
+
+	const HomeMenuList = () => <ul className="anchor_nav">
+		<li><Link to="home" spy={true} smooth={true} duration={500} onClick={() => setIsMenuOpen(!isMenuOpen)}>Home</Link></li>
+		<li><Link to="about" spy={true} smooth={true} duration={500} onClick={() => setIsMenuOpen(!isMenuOpen)}>About</Link></li>
+		<li><Link to="services" spy={true} smooth={true} duration={500} onClick={() => setIsMenuOpen(!isMenuOpen)}>Services</Link></li>
+		<li><Link to="portfolio" spy={true} smooth={true} duration={500} onClick={() => setIsMenuOpen(!isMenuOpen)}>Portfolio</Link></li>
+		<li><Link to="testimonials" spy={true} smooth={true} duration={500} onClick={() => setIsMenuOpen(!isMenuOpen)}>Testimonials</Link></li>
+		<li><Link to="articles" spy={true} smooth={true} duration={500} onClick={() => setIsMenuOpen(!isMenuOpen)}>Articles</Link></li>
+		<li><Link to="contact" spy={true} smooth={true} duration={500} onClick={() => setIsMenuOpen(!isMenuOpen)}>Contact</Link></li>
 	</ul>;
 
 	const CookieAcceptButton = () => <span>Accept Cookies</span>;
@@ -91,7 +102,7 @@ const DefaultLayout = ({ data, children, bodyClass }) => {
 					</div>
 					<div className={`arlo_tm_mobile_menu_wrap ${isMenuOpen ? `menu-open` : ` `}`}>
 						<div className="mob_menu">
-							<MenuList />
+							{isHome ? <HomeMenuList /> : <MenuList />}
 						</div>
 					</div>
 				</div>
@@ -110,7 +121,7 @@ const DefaultLayout = ({ data, children, bodyClass }) => {
 								</div>
 							</a>
 							<div className="menu_list_wrap">
-								<MenuList />
+								{isHome ? <HomeMenuList /> : <MenuList />}
 							</div>
 							<div className="leftpart_bottom">
 								<div className="social_wrap">

@@ -9,7 +9,7 @@ import FeatureImage2 from '../../img/gg-mobile.png';
 import GGLogo from '../../img/gg-logo-2.png';
 
 const GiggrafterScheduler = () => <>
-		<Layout>
+		<Layout isHome={false}>
 			<div className="arlo_tm_portfolio_single_wrap">
 				<div className="container">
 					<div className="title_holder">

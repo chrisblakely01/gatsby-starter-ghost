@@ -9,6 +9,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faHome, faMobileAlt, faCode, faTools, faComments, faCheckSquare } from "@fortawesome/free-solid-svg-icons";
 import { faChrome } from "@fortawesome/free-brands-svg-icons";
 import Fade from 'react-reveal/Fade';
+import { Element } from 'react-scroll';
 
 import GGFeature from '../img/gg-logo-2.png';
 import BeezerFeature from '../img/beezer.png';
@@ -27,6 +28,7 @@ const Home = () => (
 		{/* <MetaData /> */}
 		<Layout isHome={true}>
 			<div className="arlo_tm_section" id="home">
+				<Element name="home"></Element>
 				<div className="arlo_tm_hero_header_wrap">
 					<div className="arlo_tm_universal_box_wrap">
 						<div className="bg_wrap">
@@ -63,6 +65,7 @@ const Home = () => (
 
 			{/* <!-- ABOUT/SKILLS --> */}
 			<div className="arlo_tm_section" id="about">
+				<Element name="about"></Element>
 				<div className="arlo_tm_skills_wrap">
 					<div className="container">
 						<div className="arlo_tm_title_holder">
@@ -217,10 +220,11 @@ const Home = () => (
 			{/* <!-- /SKILLS --> */}
 
 			{/* <!-- SERVICES --> */}
-			<div className="arlo_tm_section" id="services">
+			<div className="arlo_tm_section">
 				<div className="arlo_tm_services_wrap">
 					<div className="container">
 						<div className="arlo_tm_title_holder">
+							<Element name="services"></Element>
 							<h3>Services</h3>
 							<span>How I can help your business</span>
 						</div>
@@ -314,7 +318,7 @@ const Home = () => (
 					</div>
 				</div>
 			</div>
-			<div className="arlo_tm_section" id="services">
+			<div className="arlo_tm_section">
 				<div className="arlo_tm_skills_wrap">
 					<div className="container">
 						<div className="arlo_tm_title_holder">
@@ -364,6 +368,7 @@ const Home = () => (
 
 			{/* <!-- PORTFOLIO --> */}
 			<div className="arlo_tm_section relative" id="portfolio">
+				<Element name="portfolio"></Element>
 				<div className="arlo_tm_portfolio_wrapper_all">
 
 					{/* <!-- PORTFOLIO FILTER --> */}
@@ -422,6 +427,7 @@ const Home = () => (
 
 			{/* <!-- TESTIMONIALS --> */}
 			<div className="arlo_tm_section" id="testimonials">
+				<Element name="testimonials"></Element>
 				<div className="arlo_tm_testimonials_wrapper_all">
 					<div className="arlo_tm_universal_box_wrap">
 						<div className="bg_wrap">
@@ -508,7 +514,8 @@ const Home = () => (
 				<div className="arlo_tm_news_wrap" >
 					<div className="container">
 						<div className="arlo_tm_title_holder news" id="news">
-							<h3>Writing</h3>
+							<Element name="articles"></Element>
+							<h3>Articles</h3>
 							<span>Check out my writing. I've written for major tech publications such as FreeCodeCamp.org, Hackernoon and Medium</span>
 						</div>
 						<div className="arlo_tm_list_wrap blog_list">
@@ -616,6 +623,7 @@ const Home = () => (
 
 			{/* <!-- CONTACT & FOOTER --> */}
 			<div className="arlo_tm_section" id="contact">
+				<Element name="contact"></Element>
 				<div className="container">
 					<div className="arlo_tm_title_holder contact">
 						<h3>Contact Me</h3>
