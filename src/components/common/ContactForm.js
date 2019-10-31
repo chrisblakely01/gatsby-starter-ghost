@@ -8,22 +8,17 @@ const ContactForm = () => {
 	const [showSuccess, setShowSuccess] = useState(false);
 	const [showError, setShowError] = useState(false);
 
+	const encode = data => Object.keys(data)
+		.map(key => encodeURIComponent(key) + `=` + encodeURIComponent(data[key]))
+		.join(`&`);
+
 	const handleSubmit = (e) => {
 		e.preventDefault();
-		const form = e.target;
-
-		const request = {
-			'form-name': form.getAttribute(`name`),
-			name,
-			email,
-			phoneNumber,
-			message,
-		};
 
 		fetch(`/`, {
 			method: `POST`,
 			headers: { 'Content-Type': `application/x-www-form-urlencoded` },
-			body: JSON.stringify(request),
+			body: encode({ "form-name": `cb-dev-contact`, name, email, phoneNumber, message }),
 		})
 			.then((resp) => {
 				if (resp.ok) {
