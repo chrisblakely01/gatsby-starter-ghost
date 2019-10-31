@@ -25,7 +25,13 @@ const ContactForm = () => {
 			headers: { 'Content-Type': `application/x-www-form-urlencoded` },
 			body: JSON.stringify(request),
 		})
-			.then(setShowSuccess(true))
+			.then((resp) => {
+				if (resp.ok) {
+					setShowSuccess(true);
+				} else {
+					setShowError(true);
+				}
+			})
 			.catch(() => setShowError(true));
 	};
 
