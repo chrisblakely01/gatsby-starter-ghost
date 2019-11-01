@@ -147,7 +147,7 @@ const DefaultLayout = ({ isHome, data, children, bodyClass }) => {
 
 				</div>
 			</div>
-			<CookieConsent buttonText={<CookieAcceptButton />} buttonStyle={{ margin: `10px` }} disableButtonStyles>
+			<CookieConsent buttonText={<CookieAcceptButton />} buttonStyle={{ margin: `10px` }} disableButtonStyles acceptOnScroll acceptOnScrollPercentage={1}>
 				This website uses cookies to enhance the user experience. By continuing to browse this site, you agree to the use of these cookies.
 			</CookieConsent>
 		</Fragment>
