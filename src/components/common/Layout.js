@@ -88,7 +88,7 @@ const DefaultLayout = ({ isHome, data, children, bodyClass }) => {
 					<div className="main_wrap">
 						<a href="/">
 							<div className="logo_wrap_mob">
-								Chris<span style={{ color: `#E3872D` }}>Blakely</span>.dev
+								Blakely<span style={{ color: `#E3872D` }}>Web</span>Development
 								{/* <a href="#"><img src={desktopLogo} alt="" /></a> */}
 							</div>
 						</a>
@@ -116,7 +116,7 @@ const DefaultLayout = ({ isHome, data, children, bodyClass }) => {
 						<div className="leftpart_inner">
 							<a href="/">
 								<div className="logo_wrap">
-									Chris<span style={{ color: `#E3872D` }}>Blakely</span>.dev
+									Blakely<span style={{ color: `#E3872D` }}>Web</span>Development
 									{/* <a href="#"><img src={desktopLogo} alt="" /></a> */}
 								</div>
 							</a>
