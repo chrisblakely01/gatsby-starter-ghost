@@ -340,6 +340,12 @@ const Home = () => (
 										<span className="icon-li"><FontAwesomeIcon icon={faCheckSquare} size="2x" /></span>
 										<p>Proven experience in getting web and mobile apps from idea stage to product launch</p>
 									</li>
+									<li>
+										<span className="icon-li"><FontAwesomeIcon icon={faCheckSquare} size="2x" /></span>
+										<p>
+											Incredible value. My experience working across the full stack means you won't need to hire other developers
+										</p>
+									</li>
 									<li><span className="icon-li"><FontAwesomeIcon icon={faCheckSquare} size="2x" /></span>
 										<p>
 											Web and app development doesn't have to be confusing. I'll explain everything in simple terms so you understand exactly what's happening. No unneeded technical jargon here!
@@ -350,13 +356,6 @@ const Home = () => (
 											We'll be in constant communication. I will provide regular demo's and progress reports to give you peace of mind that thing's are going in the right direction
 										</p>
 									</li>
-									<li>
-										<span className="icon-li"><FontAwesomeIcon icon={faCheckSquare} size="2x" /></span>
-										<p>
-											Competitive rates and payment options that suits you
-										</p>
-									</li>
-
 								</ul>
 							</div>
 						</Fade>
