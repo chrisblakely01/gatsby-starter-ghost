@@ -318,8 +318,9 @@ const Home = () => (
 					</div>
 				</div>
 			</div>
-			<div className="arlo_tm_section">
+			<div className="arlo_tm_section" id="why-work-with-me">
 				<div className="arlo_tm_skills_wrap">
+					<Element name="why-work-with-me"></Element>
 					<div className="container">
 						<div className="arlo_tm_title_holder">
 							<h3>Why work with me?</h3>

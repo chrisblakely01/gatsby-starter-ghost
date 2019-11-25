@@ -38,6 +38,7 @@ const DefaultLayout = ({ isHome, data, children, bodyClass }) => {
 		<li><a href="/" onClick={() => setIsMenuOpen(!isMenuOpen)}>Home</a></li>
 		<li><a href="/#about" onClick={() => setIsMenuOpen(!isMenuOpen)}>About</a></li>
 		<li><a href="/#services" onClick={() => setIsMenuOpen(!isMenuOpen)}>Services</a></li>
+		<li><a href="/#why-work-with-me" onClick={() => setIsMenuOpen(!isMenuOpen)}>Why work with me?</a></li>
 		<li><a href="/#portfolio" onClick={() => setIsMenuOpen(!isMenuOpen)}>Portfolio</a></li>
 		<li><a href="/#testimonials" onClick={() => setIsMenuOpen(!isMenuOpen)}>Testimonials</a></li>
 		<li><a href="/#news" onClick={() => setIsMenuOpen(!isMenuOpen)}>Writing</a></li>
@@ -48,6 +49,7 @@ const DefaultLayout = ({ isHome, data, children, bodyClass }) => {
 		<li><Link to="home" spy={true} smooth={true} duration={500} onClick={() => setIsMenuOpen(!isMenuOpen)}>Home</Link></li>
 		<li><Link to="about" spy={true} smooth={true} duration={500} onClick={() => setIsMenuOpen(!isMenuOpen)}>About</Link></li>
 		<li><Link to="services" spy={true} smooth={true} duration={500} onClick={() => setIsMenuOpen(!isMenuOpen)}>Services</Link></li>
+		<li><Link to="why-work-with-me" spy={true} smooth={true} duration={500} onClick={() => setIsMenuOpen(!isMenuOpen)}>Why work with me?</Link></li>
 		<li><Link to="portfolio" spy={true} smooth={true} duration={500} onClick={() => setIsMenuOpen(!isMenuOpen)}>Portfolio</Link></li>
 		<li><Link to="testimonials" spy={true} smooth={true} duration={500} onClick={() => setIsMenuOpen(!isMenuOpen)}>Testimonials</Link></li>
 		<li><Link to="articles" spy={true} smooth={true} duration={500} onClick={() => setIsMenuOpen(!isMenuOpen)}>Articles</Link></li>
