@@ -1,1 +1,1 @@
-https://www.blakelywebdevelopment.netlify.com/* https://blakelywebdevelopment.com/:splat 301!
+https://blakelywebdevelopment.netlify.com/* https://www.blakelywebdevelopment.com/:splat 301!
